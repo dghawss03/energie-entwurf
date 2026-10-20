@@ -1,0 +1,140 @@
+import { siteUrl } from "@/lib/site-url";
+import { createFileRoute } from "@tanstack/react-router";
+import {
+  Building2,
+  TrendingDown,
+  ShieldCheck,
+  FileText,
+  Sparkles,
+  Zap,
+  Users,
+  BadgeCheck,
+} from "lucide-react";
+import { SiteLayout } from "@/components/site/SiteLayout";
+import { TopicHero, FeatureGrid, ImageSplit, FinalCta } from "@/components/site/TopicSections";
+import heroImg from "@/assets/page-strom.svg";
+import splitImg from "@/assets/solution-autostrom.svg";
+import ctaBg from "@/assets/final-cta-bg.svg";
+
+export const Route = createFileRoute("/gewerbestrom")({
+  head: () => ({
+    meta: [
+      { title: "Gewerbestrom persönlich prüfen | Energie Entwurf" },
+      {
+        name: "description",
+        content:
+          "Energie Entwurf prüft Gewerbestrom für Unternehmen, Handwerk, Gastronomie und mehrere Standorte persönlich und nachvollziehbar.",
+      },
+      { property: "og:title", content: "Gewerbestrom vergleichen | Energie Entwurf" },
+      {
+        property: "og:description",
+        content:
+          "Gewerbestrom mit persönlicher Einordnung von Preis, Laufzeit und Verbrauchsprofil.",
+      },
+      {
+        property: "og:image",
+        content: siteUrl("/social-card.svg"),
+      },
+    ],
+  }),
+  component: GewerbestromPage,
+});
+
+const features = [
+  {
+    icon: TrendingDown,
+    title: "Kostenstruktur verstehen",
+    desc: "Wir betrachten Preisbestandteile, Laufzeit und Verbrauchsprofil Ihres Betriebs.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Planbarkeit einordnen",
+    desc: "Verfügbare Festpreis- und Garantieoptionen werden mit ihren Bedingungen dargestellt.",
+  },
+  {
+    icon: FileText,
+    title: "Mehrere Standorte",
+    desc: "Mehrere Zähler oder Standorte können in einer gemeinsamen Anfrage erfasst werden.",
+  },
+  {
+    icon: Users,
+    title: "Persönlicher Kontakt",
+    desc: "Rückfragen zu Lastprofil, Vertragsdaten und Angeboten besprechen Sie direkt mit unserem Team.",
+  },
+  {
+    icon: Sparkles,
+    title: "Lastprofil berücksichtigen",
+    desc: "Bei größeren Verbräuchen beziehen wir vorhandene Lastgangdaten in die Anfrage ein.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Transparent entscheiden",
+    desc: "Sie erhalten die entscheidenden Konditionen verständlich aufbereitet und entscheiden selbst.",
+  },
+];
+
+function GewerbestromPage() {
+  return (
+    <SiteLayout>
+      <TopicHero
+        kicker="Gewerbestrom"
+        title={
+          <>
+            Strom für Ihr Unternehmen.{" "}
+            <span className="text-success">Passend zum Verbrauchsprofil.</span>
+          </>
+        }
+        lead="Vom Handwerksbetrieb bis zum Filialnetz: Energie Entwurf erfasst Ihren Bedarf und ordnet verfügbare Gewerbestromangebote verständlich ein."
+        image={heroImg}
+        imageAlt="Illustration eines Wohnhauses mit Windenergie"
+        Icon={Building2}
+        primaryCta={{
+          to: "/angebot?start=gewerbe&kunde=gewerbe",
+          label: "Gewerbestrom prüfen",
+        }}
+        secondaryCta={{ to: "/kontakt", label: "Persönliches Angebot anfordern" }}
+      />
+
+      <FeatureGrid
+        title="Warum Gewerbestrom über Energie Entwurf?"
+        intro="Sechs Punkte, die Unternehmen bei der Tarifprüfung mit Energie Entwurf unterstützen."
+        items={features}
+      />
+
+      <ImageSplit
+        eyebrow="Für wen das passt"
+        title="Vom Café bis zur Maschinenhalle"
+        body="Jede Branche hat ein anderes Verbrauchsprofil. Wir erfassen Jahresverbrauch, Zähler, Standorte und Lastgangdaten, soweit sie für die Anfrage erforderlich sind."
+        image={splitImg}
+        imageAlt="Illustration eines Elektroautos an einer Ladestation"
+        bullets={[
+          "Handwerk, Gastronomie, Einzelhandel, Praxen",
+          "Filialnetze & Hausverwaltungen mit mehreren Zählern",
+          "Produzierendes Gewerbe mit individuellem Lastprofil",
+          "Vorhandene Vertrags- und Rechnungsdaten strukturiert erfassen",
+        ]}
+      />
+
+      <ImageSplit
+        reverse
+        eyebrow="So läuft es ab"
+        title="3 Schritte zur passenden Tarifentscheidung"
+        body="Sie übermitteln die relevanten Unterlagen. Wir prüfen die Ausgangslage, besprechen verfügbare Optionen und begleiten auf Wunsch die nächsten Schritte."
+        image={ctaBg}
+        imageAlt="Illustration eines Hauses mit Solarmodulen"
+        bullets={[
+          "1. Rechnung hochladen oder per E-Mail senden",
+          "2. Energie Entwurf ordnet verfügbare Optionen für Ihr Profil ein",
+          "3. Sie entscheiden und beauftragen die gewünschten nächsten Schritte",
+        ]}
+      />
+
+      <FinalCta
+        title="Gewerbestrom passend zum Betrieb prüfen"
+        body="Senden Sie uns Ihre letzte Jahresrechnung. Die erste Einordnung ist kostenlos und unverbindlich."
+        image={ctaBg}
+        primaryCta="/angebot?start=gewerbe&kunde=gewerbe"
+      />
+    </SiteLayout>
+  );
+}

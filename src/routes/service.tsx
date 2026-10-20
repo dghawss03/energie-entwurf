@@ -1,0 +1,331 @@
+import { siteUrl } from "@/lib/site-url";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { motion } from "framer-motion";
+import {
+  Headphones,
+  ArrowRight,
+  Phone,
+  Mail,
+  MessageCircle,
+  FileText,
+  Gift,
+  Wrench,
+  HelpCircle,
+  Clock,
+  ShieldCheck,
+} from "lucide-react";
+import { SiteLayout } from "@/components/site/SiteLayout";
+import { TopicHero } from "@/components/site/TopicSections";
+import heroImg from "@/assets/page-service.svg";
+import imgWechsel from "@/assets/solution-autostrom.svg";
+import imgDocs from "@/assets/page-wissen.svg";
+import ctaBg from "@/assets/final-cta-bg.svg";
+
+export const Route = createFileRoute("/service")({
+  head: () => ({
+    meta: [
+      { title: "Service: Persönliche Hilfe rund um Energie | Energie Entwurf" },
+      {
+        name: "description",
+        content:
+          "Kontakt, Wechselbegleitung, Dokumente und Antworten: der persönliche Service von Energie Entwurf für Ihre Tariffragen.",
+      },
+      { property: "og:title", content: "Service | Energie Entwurf" },
+      {
+        property: "og:description",
+        content: "Persönliche Hilfe rund um Tarifprüfung, Unterlagen und Anbieterwechsel.",
+      },
+      {
+        property: "og:image",
+        content: siteUrl("/social-card.svg"),
+      },
+    ],
+  }),
+  component: ServicePage,
+});
+
+const fadeUp = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
+};
+
+const services = [
+  {
+    icon: Phone,
+    title: "Persönliche Beratung",
+    desc: "Besprechen Sie Fragen zu Strom, Gas und Ihrer Anfrage direkt mit unserem Team.",
+    to: "/kontakt",
+    cta: "Demokontakt",
+  },
+  {
+    icon: HelpCircle,
+    title: "Hilfe & FAQ",
+    desc: "Antworten auf die häufigsten Fragen zu Wechsel, Tarifen, Datenschutz und mehr.",
+    to: "/faq",
+    cta: "Zur FAQ",
+  },
+  {
+    icon: Wrench,
+    title: "Unterstützung beim Wechsel",
+    desc: "Wir erläutern den Ablauf und unterstützen bei den vereinbarten nächsten Schritten.",
+    to: "/ablauf",
+    cta: "So läuft's ab",
+  },
+  {
+    icon: FileText,
+    title: "Dokumente & Verträge",
+    desc: "Widerrufsbelehrung, Datenschutz und weitere rechtliche Informationen zentral abrufen.",
+    to: "/widerruf",
+    cta: "Dokumente",
+  },
+  {
+    icon: Gift,
+    title: "Freunde werben",
+    desc: "Empfehlen Sie uns weiter und sichern Sie sich 30 € Demo-Gutschein pro erfolgreichem Wechsel.",
+    to: "/freunde-werben",
+    cta: "Mehr erfahren",
+  },
+  {
+    icon: MessageCircle,
+    title: "Direkter telefonischer Kontakt",
+    desc: "Rufen Sie uns zu unseren Servicezeiten an und sprechen Sie direkt mit unserem Team.",
+    to: "/kontakt",
+    cta: "Jetzt anrufen",
+  },
+];
+
+const promises = [
+  {
+    icon: Clock,
+    title: "Verlässliche Rückmeldung",
+    desc: "Wir bearbeiten Anfragen so zeitnah wie möglich und melden uns über den gewählten Kontaktweg.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Datenschutz im Blick",
+    desc: "Ihre Daten werden zweckgebunden und entsprechend unserer Datenschutzerklärung verarbeitet.",
+  },
+  {
+    icon: Headphones,
+    title: "Echte Menschen",
+    desc: "Komplexe Fragen besprechen Sie persönlich mit unserem Beratungsteam.",
+  },
+];
+
+function ServicePage() {
+  return (
+    <SiteLayout>
+      <TopicHero
+        kicker="Wir sind für Sie da"
+        title={<>Energie Entwurf bleibt ansprechbar.</>}
+        lead="Von der ersten Tariffrage bis zu den nächsten Schritten: Unser Team erklärt, ordnet ein und unterstützt persönlich."
+        image={heroImg}
+        imageAlt="Illustration eines digitalen Dokuments mit Verbrauchsdiagramm"
+        Icon={Headphones}
+        primaryCta={{ to: "/kontakt", label: "Kontakt aufnehmen" }}
+        secondaryCta={{ to: "/faq", label: "FAQ ansehen" }}
+      />
+
+      {/* SERVICES GRID */}
+      <section className="mx-auto max-w-6xl px-4 py-20 md:py-24">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold text-primary md:text-4xl">
+            Alle Services auf einen Blick
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Wählen Sie den Kontaktweg oder die Information, die gerade zu Ihrem Anliegen passt.
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((s, i) => (
+            <motion.div
+              key={s.title}
+              {...fadeUp}
+              transition={{ ...fadeUp.transition, delay: i * 0.04 }}
+              className="group flex flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-success/40 hover:shadow-card"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-success/15 to-success/5 text-success ring-1 ring-success/20">
+                <s.icon className="h-6 w-6" />
+              </div>
+              <h3 className="mt-4 text-lg font-semibold text-primary">{s.title}</h3>
+              <p className="mt-2 flex-1 text-sm text-muted-foreground">{s.desc}</p>
+              <Link
+                to={s.to}
+                className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-success hover:underline"
+              >
+                {s.cta}{" "}
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* WECHSEL-SERVICE */}
+      <section className="border-y border-border bg-muted/30">
+        <div className="mx-auto max-w-6xl px-4 py-20 md:py-24">
+          <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+            <motion.div {...fadeUp}>
+              <div className="text-xs font-bold uppercase tracking-wider text-success">
+                Unterstützung beim Wechsel
+              </div>
+              <h2 className="mt-3 text-3xl font-bold text-primary md:text-4xl">
+                Wir strukturieren den Wechsel mit Ihnen.
+              </h2>
+              <p className="mt-5 text-muted-foreground">
+                Laufzeiten, erforderliche Daten und Vertragsunterlagen müssen zusammenpassen.
+                Energie Entwurf erklärt den Ablauf und unterstützt dort, wo Sie uns beauftragen.
+              </p>
+              <ul className="mt-6 space-y-3">
+                {[
+                  "Bestehende Kündigungsfrist und Vertragslaufzeit beachten",
+                  "Erforderliche Angaben vollständig zusammenstellen",
+                  "Bestätigung und neue Vertragsunterlagen kontrollieren",
+                  "Fragen zum Ablauf persönlich klären",
+                ].map((b) => (
+                  <li key={b} className="flex items-start gap-3 text-foreground/80">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-success" /> {b}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div
+              {...fadeUp}
+              transition={{ ...fadeUp.transition, delay: 0.1 }}
+              className="overflow-hidden rounded-3xl border border-border shadow-card"
+            >
+              <img
+                src={imgWechsel}
+                alt="Illustration eines digitalen Dokuments"
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* DOKUMENTE */}
+      <section className="mx-auto max-w-6xl px-4 py-20 md:py-24">
+        <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+          <motion.div
+            {...fadeUp}
+            className="overflow-hidden rounded-3xl border border-border shadow-card md:order-2"
+          >
+            <img
+              src={imgDocs}
+              alt="Dokumente und Verträge"
+              loading="lazy"
+              className="aspect-[4/3] w-full object-cover"
+            />
+          </motion.div>
+          <motion.div
+            {...fadeUp}
+            transition={{ ...fadeUp.transition, delay: 0.1 }}
+            className="md:order-1"
+          >
+            <div className="text-xs font-bold uppercase tracking-wider text-success">
+              Dokumente & Verträge
+            </div>
+            <h2 className="mt-3 text-3xl font-bold text-primary md:text-4xl">
+              Alles griffbereit, wenn Sie es brauchen.
+            </h2>
+            <p className="mt-5 text-muted-foreground">
+              Rechtliche Informationen finden Sie jederzeit auf dieser Website. Unterlagen zu einer
+              konkreten Anfrage können Sie bei unserem Team anfordern. Wir prüfen Ihr Anliegen und
+              melden uns über den gewählten Kontaktweg.
+            </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {[
+                { label: "Vertragskopie", icon: FileText },
+                { label: "Widerrufsformular", icon: FileText },
+                { label: "Wechselbestätigung", icon: FileText },
+                { label: "Datenschutzerklärung", icon: ShieldCheck },
+              ].map((d) => (
+                <div
+                  key={d.label}
+                  className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-soft"
+                >
+                  <d.icon className="h-5 w-5 text-success" />
+                  <span className="text-sm font-semibold text-primary">{d.label}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href="/kontakt#demo-kontakt"
+                className="inline-flex max-w-full items-center gap-2 break-words text-sm font-bold text-success hover:underline"
+              >
+                <Mail className="h-4 w-4 shrink-0" /> Dokument per E-Mail anfragen
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* PROMISES */}
+      <section className="border-t border-border bg-muted/30">
+        <div className="mx-auto max-w-6xl px-4 py-20 md:py-24">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold text-primary md:text-4xl">
+              Unser Serviceversprechen
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Drei Dinge, auf die Sie sich verlassen können.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {promises.map((p, i) => (
+              <motion.div
+                key={p.title}
+                {...fadeUp}
+                transition={{ ...fadeUp.transition, delay: i * 0.05 }}
+                className="rounded-2xl border border-border bg-card p-7 text-center shadow-soft"
+              >
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-success/15 to-success/5 text-success ring-1 ring-success/20">
+                  <p.icon className="h-7 w-7" />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold text-primary">{p.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{p.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="relative isolate overflow-hidden">
+        <img
+          src={ctaBg}
+          alt=""
+          aria-hidden
+          loading="lazy"
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-primary/85" />
+        <div className="mx-auto max-w-5xl px-4 py-20 text-center text-primary-foreground md:py-28">
+          <h2 className="text-3xl font-bold md:text-5xl">Eine Frage. Eine Antwort.</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/90">
+            Rufen Sie uns direkt an oder schreiben Sie uns. Wir sind für Sie da.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Link
+              to="/kontakt"
+              className="inline-flex max-w-full items-center justify-center gap-2 whitespace-normal rounded-full bg-success px-6 py-3 text-center text-sm font-bold text-success-foreground transition hover:bg-success/90"
+            >
+              <Phone className="h-4 w-4" /> Demokontakt
+            </Link>
+            <a
+              href="/kontakt#demo-kontakt"
+              className="inline-flex max-w-full items-center justify-center gap-2 whitespace-normal rounded-full border border-white/30 bg-transparent px-6 py-3 text-center text-sm font-bold text-primary-foreground transition hover:bg-white/10"
+            >
+              E-Mail schreiben <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </SiteLayout>
+  );
+}

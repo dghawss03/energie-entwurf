@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="1100" viewBox="0 0 850 1100">
+  <rect width="850" height="1100" fill="white"/>
+  <g font-family="Arial, sans-serif" fill="#0a1f44">
+    <text x="70" y="100" font-size="32" font-weight="bold">FIKTIVE BEISPIELRECHNUNG</text>
+    <text x="70" y="150" font-size="20">Nur lokale Demo – kein Zahlungsanspruch</text>
+    <path d="M70 190 H780" stroke="#88cc27" stroke-width="5"/>
+    <text x="70" y="260" font-size="24">Beispiel Energie</text>
+    <text x="70" y="310" font-size="20">Demo Haushalt 1</text>
+    <text x="70" y="345" font-size="20">Beispielweg 1, 10115 Musterstadt</text>
+    <text x="70" y="440" font-size="24" font-weight="bold">Strom – Jahresübersicht</text>
+    <text x="70" y="510" font-size="22">Beispielverbrauch</text><text x="590" y="510" font-size="22">3.500 kWh</text>
+    <text x="70" y="560" font-size="22">Fiktiver Arbeitspreis</text><text x="590" y="560" font-size="22">29 ct/kWh</text>
+    <text x="70" y="610" font-size="22">Fiktiver Grundpreis</text><text x="590" y="610" font-size="22">120 EUR/Jahr</text>
+    <path d="M70 650 H780" stroke="#bcc8d4"/>
+    <text x="70" y="710" font-size="24" font-weight="bold">Beispielsumme</text><text x="590" y="710" font-size="24">1.135 EUR</text>
+    <text x="70" y="850" font-size="18">Alle Namen, Adressen und Konditionen sind frei erfunden.</text>
+    <text x="70" y="885" font-size="18">Keine Bankverbindung, kein echter Vertrag, keine Übertragung.</text>
+  </g>
+</svg>

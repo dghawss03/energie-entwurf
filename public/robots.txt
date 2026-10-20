@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# Noch unveröffentlicht; Domain und rechtliche Freigabe vor Indexierung prüfen.
+Sitemap: https://dghawss03.github.io/energie-entwurf/sitemap.xml

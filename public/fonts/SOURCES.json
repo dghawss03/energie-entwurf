@@ -1,0 +1,30 @@
+{
+  "downloaded": "2026-10-20",
+  "cssSource": "https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&display=swap",
+  "fonts": [
+    {
+      "file": "manrope-latin-ext.woff2",
+      "bytes": 15120,
+      "source": "https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggmxSuXd.woff2"
+    },
+    {
+      "file": "manrope-latin.woff2",
+      "bytes": 24836,
+      "source": "https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2"
+    },
+    {
+      "file": "sora-latin-ext.woff2",
+      "bytes": 15548,
+      "source": "https://fonts.gstatic.com/s/sora/v17/xMQbuFFYT72XzQspDre2.woff2"
+    },
+    {
+      "file": "sora-latin.woff2",
+      "bytes": 33652,
+      "source": "https://fonts.gstatic.com/s/sora/v17/xMQbuFFYT72XzQUpDg.woff2"
+    }
+  ],
+  "licenses": [
+    "manrope-OFL.txt",
+    "sora-OFL.txt"
+  ]
+}
