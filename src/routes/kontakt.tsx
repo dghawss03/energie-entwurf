@@ -1,3 +1,4 @@
+import { sitePath } from "@/lib/site-url";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
@@ -16,13 +17,13 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
     meta: [
-      { title: "Kontakt: Persönliche Energieberatung | Energie Entwurf" },
+      { title: "Kontakt: Persönliche Energieberatung | Entwurf Energie" },
       {
         name: "description",
         content:
-          "Kontaktieren Sie Energie Entwurf telefonisch, per E-Mail oder über die Online-Tarifprüfung.",
+          "Kontaktieren Sie Entwurf Energie telefonisch, per E-Mail oder über die Online-Tarifprüfung.",
       },
-      { property: "og:title", content: "Kontakt | Energie Entwurf" },
+      { property: "og:title", content: "Kontakt | Entwurf Energie" },
       {
         property: "og:description",
         content: "Persönliche Energieberatung per Telefon und direkter Kontakt zu unserem Team.",
@@ -64,9 +65,7 @@ const hours = [
 function KontaktPage() {
   return (
     <SiteLayout>
-      <div id="demo-kontakt" className="mx-auto max-w-6xl px-4 pt-6 text-sm text-muted-foreground">
-        Fiktive Kontaktangaben – keine Beratung, kein Versand und keine echte Vertragsanfrage.
-      </div>
+      <div id="demo-kontakt" />
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border bg-gradient-to-b from-success/5 via-background to-background">
         <div className="absolute inset-0 -z-10 opacity-40 [background:radial-gradient(60%_50%_at_50%_0%,hsl(var(--success)/0.18),transparent_60%)]" />
@@ -77,11 +76,17 @@ function KontaktPage() {
           >
             <Phone className="mt-0.5 h-4 w-4 shrink-0" />
             <span>
-              <a href="/kontakt#demo-kontakt" className="block text-sm font-bold hover:underline">
-                Keine echte Telefonnummer
+              <a
+                href={sitePath("/kontakt#demo-kontakt")}
+                className="block text-sm font-bold hover:underline"
+              >
+                [Telefonnummer ergänzen]
               </a>
-              <a href="/kontakt#demo-kontakt" className="mt-1 block font-medium hover:underline">
-                demo@example.com (fiktiv)
+              <a
+                href={sitePath("/kontakt#demo-kontakt")}
+                className="mt-1 block font-medium hover:underline"
+              >
+                kontakt@example.com
               </a>
             </span>
           </motion.div>
@@ -90,15 +95,14 @@ function KontaktPage() {
             transition={{ ...fadeUp.transition, delay: 0.05 }}
             className="mt-6 text-4xl font-bold leading-tight text-primary md:text-6xl"
           >
-            Demokontakt
+            Kontakt
           </motion.h1>
           <motion.p
             {...fadeUp}
             transition={{ ...fadeUp.transition, delay: 0.1 }}
             className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            Diese Kontaktseite veranschaulicht eine digitale Beratungsplattform. Alle Angaben sind
-            fiktiv; es findet keine echte Beratung statt.
+            Wir helfen Ihnen bei Fragen zu Tarifen, Unterlagen und dem nächsten Schritt.
           </motion.p>
         </div>
       </section>
@@ -145,9 +149,7 @@ function KontaktPage() {
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-success/10 text-success">
                 <Clock className="h-6 w-6" />
               </div>
-              <h2 className="mt-5 text-xl font-bold text-primary">
-                Beispiel-Servicezeiten (fiktiv)
-              </h2>
+              <h2 className="mt-5 text-xl font-bold text-primary">Servicezeiten</h2>
               <ul className="mt-4 divide-y divide-border">
                 {hours.map((h) => (
                   <li key={h.day} className="flex items-center justify-between gap-4 py-3 text-sm">
@@ -168,17 +170,17 @@ function KontaktPage() {
                 <Building2 className="h-6 w-6" />
               </div>
               <h2 className="mt-5 text-xl font-bold text-primary">
-                Energie Entwurf in Demostadt (fiktiv)
+                Ihr Kontakt zu Entwurf Energie
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Energie Entwurf Demoorganisation (fiktiv)
+                Entwurf Energie
                 <br />
-                Beispielweg 1 (fiktiv)
+                [Firmenanschrift ergänzen]
                 <br />
-                00000 Demostadt (fiktiv)
+                [Postleitzahl und Ort ergänzen]
               </p>
               <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-success/10 px-3 py-1 text-xs font-semibold text-success">
-                <MapPin className="h-3.5 w-3.5" /> Fiktive Kontaktkarte
+                <MapPin className="h-3.5 w-3.5" /> Kontaktinformationen
               </div>
             </motion.div>
 

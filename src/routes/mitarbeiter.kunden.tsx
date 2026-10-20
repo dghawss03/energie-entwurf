@@ -67,7 +67,7 @@ function KundenPage() {
       "Name",
       "E-Mail",
       "Telefon",
-      "Demo-Angebote",
+      "Angebote",
       "Ersparnis",
       "Seit",
       "Status",
@@ -107,7 +107,7 @@ function KundenPage() {
           </Button>
           <Button size="sm" onClick={handleAdd}>
             <Plus className="mr-2 h-4 w-4" />
-            Demo-Anfrage anlegen
+            Anfrage anlegen
           </Button>
         </>
       }
@@ -120,7 +120,7 @@ function KundenPage() {
       )}
       {isLoading && <p className="mb-4 text-sm text-muted-foreground">Kunden werden geladen…</p>}
       <p className="mb-4 text-sm text-muted-foreground">
-        Abgeschlossene Demo-Leads erscheinen automatisch als Kunden.
+        Abgeschlossene Vorgänge erscheinen automatisch als Kunden.
       </p>
       <div className="mb-4 max-w-xs">
         <Input placeholder="Kunde suchen…" value={q} onChange={(e) => setQ(e.target.value)} />
@@ -133,7 +133,7 @@ function KundenPage() {
                 <tr>
                   <th className="px-6 py-3 font-medium">Kunde</th>
                   <th className="px-6 py-3 font-medium">Kontakt</th>
-                  <th className="px-6 py-3 font-medium">Demo-Angebote</th>
+                  <th className="px-6 py-3 font-medium">Angebote</th>
                   <th className="px-6 py-3 font-medium">Ersparnis / Jahr</th>
                   <th className="px-6 py-3 font-medium">Kunde seit</th>
                   <th className="px-6 py-3 font-medium">Status</th>

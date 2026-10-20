@@ -107,7 +107,7 @@ export function CookieConsent() {
                 </button>
               </div>
               <p className="mt-1 text-sm text-muted-foreground">
-                Energie Entwurf speichert notwendige Einstellungen, damit diese Website zuverlässig
+                Entwurf Energie speichert notwendige Einstellungen, damit diese Website zuverlässig
                 funktioniert. Die optionalen Schalter simulieren Einstellungen und aktivieren keine
                 Dienste. Hinweise zu den aktuell geladenen Schriften stehen in unserer{" "}
                 <Link to="/datenschutz" className="underline hover:text-primary">

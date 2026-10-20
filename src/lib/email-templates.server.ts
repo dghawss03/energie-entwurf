@@ -21,7 +21,7 @@ function layout(content: string, previewText = ""): string {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Energie Entwurf</title>
+  <title>Entwurf Energie</title>
   ${previewText ? `<div style="display:none;max-height:0;overflow:hidden;">${escapeHtml(previewText)}&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌</div>` : ""}
 </head>
 <body style="margin:0;padding:0;background:#f8fafc;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#1e293b;">
@@ -31,7 +31,7 @@ function layout(content: string, previewText = ""): string {
         <!-- Header -->
         <tr>
           <td style="background:${BRAND_DARK};padding:24px 32px;text-align:center;">
-            <img src="${EMAIL_LOGO_URL}" alt="Energie Entwurf" width="220" style="display:block;width:220px;max-width:100%;height:auto;margin:0 auto;border:0;outline:none;text-decoration:none;" />
+            <img src="${EMAIL_LOGO_URL}" alt="Entwurf Energie" width="220" style="display:block;width:220px;max-width:100%;height:auto;margin:0 auto;border:0;outline:none;text-decoration:none;" />
             <p style="margin:4px 0 0;font-size:13px;color:#94a3b8;">Persönliche Tarifberatung für Strom und Gas</p>
           </td>
         </tr>
@@ -45,7 +45,7 @@ function layout(content: string, previewText = ""): string {
         <tr>
           <td style="background:#f8fafc;padding:20px 32px;border-top:1px solid #e2e8f0;text-align:center;">
             <p style="margin:0;font-size:12px;color:#94a3b8;">
-              Energie Entwurf · Tarife verstehen und bewusst entscheiden<br/>
+              Entwurf Energie · Tarife verstehen und bewusst entscheiden<br/>
               Demo-Projekt von dghWeb – nicht für echte Vertragsanfragen.
             </p>
           </td>
@@ -215,7 +215,7 @@ export function offerSentTemplate(d: OfferSentData): {
       Wenn Sie Fragen haben oder Ihren Termin verschieben möchten, antworten Sie einfach auf diese E-Mail.
     </p>
     <p style="font-size:13px;color:#94a3b8;margin:0;">
-      Vielen Dank für Ihr Vertrauen in Energie Entwurf!
+      Vielen Dank für Ihr Vertrauen in Entwurf Energie!
     </p>`,
     "Ihr persönliches Energieangebot ist bereit.",
   );
@@ -294,7 +294,7 @@ export function completedTemplate(d: CompletedData): {
       </p>
     </div>
     <p style="font-size:14px;color:#475569;margin:0 0 16px;">
-      Wir bedanken uns für Ihr Vertrauen in Energie Entwurf.
+      Wir bedanken uns für Ihr Vertrauen in Entwurf Energie.
       Empfehlen Sie uns gerne an Freunde und Familie weiter!
     </p>
     <p style="font-size:13px;color:#94a3b8;margin:0;">
@@ -373,7 +373,7 @@ export function rejectedTemplate(d: RejectedData): {
       Monaten erneut anfragen, wenn sich die Marktlage verändert hat.
     </p>
     <p style="font-size:13px;color:#94a3b8;margin:0;">
-      Vielen Dank für Ihr Interesse an Energie Entwurf.
+      Vielen Dank für Ihr Interesse an Entwurf Energie.
     </p>`,
     "Zu Ihrer Energie-Anfrage haben wir leider kein passendes Angebot.",
   );
@@ -422,7 +422,7 @@ export function referralCodeIssuedTemplate({
       <li style="margin-bottom:8px;">Nach 30 Tagen erhalten Sie einen 30-€-Demo-Gutschein per E-Mail</li>
     </ol>
     <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px 20px;font-size:13px;color:#64748b;">
-      <strong>Bedingungen:</strong> Nur Neukunden ohne laufende Anfrage bei Energie Entwurf zählen.
+      <strong>Bedingungen:</strong> Nur Neukunden ohne laufende Anfrage bei Entwurf Energie zählen.
       Ihr Code ist 90 Tage gültig. Max. 5 Prämien pro Monat.
     </div>`,
     "Ihr persönlicher Empfehlungs-Link ist bereit.",
@@ -479,7 +479,7 @@ export function referralQualifiedTemplate({
       Wir melden uns dann bei Ihnen — Sie müssen nichts weiter tun.
     </p>
     <p style="font-size:13px;color:#94a3b8;margin:0;">
-      Vielen Dank, dass Sie Energie Entwurf weiterempfehlen!
+      Vielen Dank, dass Sie Entwurf Energie weiterempfehlen!
     </p>`,
     `Sie haben eine ${rewardEur}-€-Prämie verdient!`,
   );
@@ -497,7 +497,7 @@ export function referralCodeRequestTemplate({
   referralCode: string;
   referralUrl: string;
 }): { subject: string; html: string } {
-  const subject = "Ihr Empfehlungslink von Energie Entwurf";
+  const subject = "Ihr Empfehlungslink von Entwurf Energie";
   const html = layout(
     `<h2 style="margin:0 0 8px;font-size:22px;color:${BRAND_DARK};">
       Ihr persönlicher Empfehlungs-Link
@@ -525,7 +525,7 @@ export function referralCodeRequestTemplate({
       Ihr Freund muss das Formular über Ihren Link ausfüllen und seinen Wechsel abschließen.
       Danach erhalten Sie nach 30 Tagen Wartezeit automatisch Ihren Gutschein.
     </div>`,
-    "Ihr persönlicher Empfehlungslink von Energie Entwurf.",
+    "Ihr persönlicher Empfehlungslink von Entwurf Energie.",
   );
   return { subject, html };
 }

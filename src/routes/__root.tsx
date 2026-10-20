@@ -82,31 +82,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "robots", content: "noindex,nofollow" },
-      { title: "Energie Entwurf | Energievergleiche & digitale Kundenverwaltung" },
+      { title: "Entwurf Energie | Energievergleiche & digitale Kundenverwaltung" },
       {
         name: "description",
         content:
-          "Demo-Projekt von dghWeb für Energievergleiche und digitale Kundenverwaltung. Nicht für echte Vertragsanfragen.",
+          "Entwurf Energie: Strom- und Gastarife vergleichen, Angebote prüfen und Anfragen verwalten.",
       },
       {
         property: "og:title",
-        content: "Energie Entwurf | Energievergleiche & digitale Kundenverwaltung",
+        content: "Entwurf Energie | Energievergleiche & digitale Kundenverwaltung",
       },
       {
         property: "og:description",
         content:
-          "Demo von dghWeb: Energievergleiche und digitale Kundenverwaltung mit fiktiven Daten.",
+          "Entwurf Energie – passende Tarife für Strom und Gas, verständlich und persönlich.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       {
         name: "twitter:title",
-        content: "Energie Entwurf | Energievergleiche & digitale Kundenverwaltung",
+        content: "Entwurf Energie | Energievergleiche & digitale Kundenverwaltung",
       },
       {
         name: "twitter:description",
         content:
-          "Demo von dghWeb: Energievergleiche und digitale Kundenverwaltung mit fiktiven Daten.",
+          "Entwurf Energie – passende Tarife für Strom und Gas, verständlich und persönlich.",
       },
       {
         property: "og:image",

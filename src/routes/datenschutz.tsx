@@ -5,22 +5,22 @@ import { sitePath } from "@/lib/site-url";
 export const Route = createFileRoute("/datenschutz")({
   head: () => ({
     meta: [
-      { title: "Datenschutz | Energie Entwurf" },
+      { title: "Datenschutz | Entwurf Energie" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
   component: () => (
     <StaticPage
       title="Datenschutz"
-      lead="Prüfentwurf für die öffentliche Demo über GitHub Pages. Die tatsächlichen Verarbeitungen sind beschrieben; markierte Angaben und Rechtsgrundlagen müssen vor Veröffentlichung ergänzt beziehungsweise geprüft werden."
+      lead="Datenschutzhinweise – Entwurf. Die markierten Betreiberangaben und rechtlichen Grundlagen sind vor Veröffentlichung zu vervollständigen."
     >
       <p className="text-xs leading-relaxed text-muted-foreground">
-        Diese Seite ist Bestandteil einer Demonstrationswebsite. Die Angaben sind beispielhaft und
-        werden bei einer tatsächlichen Umsetzung individuell ergänzt.
+        Rechtstext in Vorbereitung. Markierte Unternehmensangaben werden vor Veröffentlichung
+        vervollständigt.
       </p>
-      <h2>1. Verantwortliche Stelle und fiktive Demo</h2>
+      <h2>1. Verantwortliche Stelle</h2>
       <p>
-        Energie Entwurf ist ein fiktives Energieunternehmen innerhalb einer Softwaredemo von dghWeb.
+        Entwurf Energie ist ein fiktives Energieunternehmen innerhalb einer Softwaredemo von dghWeb.
         Es gibt keine echten Energietarife oder Vertragsabschlüsse. Datenschutzrechtlich
         verantwortlich ist der tatsächliche Betreiber des dghWeb-Präsentationsprojekts, nicht das
         fiktive Unternehmen. Die vollständige rechtliche Identität hinter dghWeb ist unten noch
@@ -100,7 +100,7 @@ export const Route = createFileRoute("/datenschutz")({
         der Dokumentation und laden keine externen Ressourcen.
       </p>
 
-      <h2>4. Lokale Demodaten und Speicherdauer</h2>
+      <h2>4. Gespeicherte Daten und Speicherdauer</h2>
       <p>
         Formulare, Mitarbeiterbereich und CRM verwenden eine lokale Datenschicht. Demo-Eingaben
         werden von der Anwendung nicht an einen Energieanbieter, eine produktive Datenbank oder
@@ -210,7 +210,7 @@ export const Route = createFileRoute("/datenschutz")({
 
       <h2>8. Löschen und Datenschutzrechte</h2>
       <p>
-        Über „Demo zurücksetzen“ auf der Anmeldeseite oder unter Einstellungen können lokale
+        Über „Testumgebung zurücksetzen“ auf der Anmeldeseite oder unter Einstellungen können lokale
         Demoänderungen, Dokumente, Formularentwürfe und die lokale Anmeldung entfernt werden. Zum
         vollständigen Entfernen einschließlich der gespeicherten Dialogauswahl löschen Sie die
         Website-Daten in den Browsereinstellungen. Dies löscht keine gegebenenfalls beim Hosting

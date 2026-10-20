@@ -19,13 +19,13 @@ import ctaBg from "@/assets/final-cta-bg.svg";
 export const Route = createFileRoute("/gas")({
   head: () => ({
     meta: [
-      { title: "Gastarife persönlich prüfen | Energie Entwurf" },
+      { title: "Gastarife persönlich prüfen | Entwurf Energie" },
       {
         name: "description",
         content:
-          "Energie Entwurf prüft Gastarife für private Haushalte und Unternehmen und erklärt Preise, Laufzeiten und Garantien verständlich.",
+          "Entwurf Energie prüft Gastarife für private Haushalte und Unternehmen und erklärt Preise, Laufzeiten und Garantien verständlich.",
       },
-      { property: "og:title", content: "Gas vergleichen | Energie Entwurf" },
+      { property: "og:title", content: "Gas vergleichen | Entwurf Energie" },
       {
         property: "og:description",
         content: "Gastarife verständlich prüfen und persönlich beraten lassen.",
@@ -68,7 +68,7 @@ const features = [
   {
     icon: BadgeCheck,
     title: "Begleiteter Wechsel",
-    desc: "Wenn Sie wechseln möchten, unterstützt Energie Entwurf bei den vereinbarten Schritten.",
+    desc: "Wenn Sie wechseln möchten, unterstützt Entwurf Energie bei den vereinbarten Schritten.",
   },
 ];
 
@@ -78,7 +78,7 @@ function GasPage() {
       <TopicHero
         kicker="Gas vergleichen"
         title={<>Gaspreise verstehen. Bewusst entscheiden.</>}
-        lead="Energie Entwurf macht Gastarife vergleichbar und erklärt, welche Konditionen zu Ihrem Verbrauch und Ihren Wünschen passen."
+        lead="Entwurf Energie macht Gastarife vergleichbar und erklärt, welche Konditionen zu Ihrem Verbrauch und Ihren Wünschen passen."
         image={heroImg}
         imageAlt="Illustration eines Wohnhauses mit Energiespeicher"
         Icon={Flame}
@@ -86,7 +86,7 @@ function GasPage() {
       />
 
       <FeatureGrid
-        title="Was Energie Entwurf für Sie prüft"
+        title="Was Entwurf Energie für Sie prüft"
         intro="Sechs Punkte, die bei einer Gastarifentscheidung eine wichtige Rolle spielen."
         items={features}
       />
@@ -120,7 +120,7 @@ function GasPage() {
 
       <FinalCta
         title="Passt Ihr Gastarif noch?"
-        body="Übermitteln Sie Ihre Eckdaten. Energie Entwurf prüft die Ausgangslage und bespricht passende Optionen persönlich mit Ihnen."
+        body="Übermitteln Sie Ihre Eckdaten. Entwurf Energie prüft die Ausgangslage und bespricht passende Optionen persönlich mit Ihnen."
         image={ctaBg}
       />
     </SiteLayout>

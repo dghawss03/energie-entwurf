@@ -11,7 +11,7 @@ function files(directory: string): string[] {
   );
 }
 
-describe("Energie Entwurf branding", () => {
+describe("Entwurf Energie branding", () => {
   it("updates saved presentation content without replacing demo records or user edits", () => {
     const previous = {
       id: "demo-existing-record",
@@ -37,7 +37,7 @@ describe("Energie Entwurf branding", () => {
     for (const path of publicFiles) {
       const text = readFileSync(path, "utf8");
       if (path.endsWith(".svg"))
-        expect(text, path).toMatch(/Energie Entwurf|FIKTIVE BEISPIELRECHNUNG/);
+        expect(text, path).toMatch(/Entwurf Energie|FIKTIVE BEISPIELRECHNUNG/);
       const domains = [...text.matchAll(/[A-Z0-9._%+-]+@((?:[A-Z0-9-]+\.)+[A-Z]{2,})/gi)].map(
         (match) => match[1].toLowerCase(),
       );

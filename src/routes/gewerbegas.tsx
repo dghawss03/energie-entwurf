@@ -19,13 +19,13 @@ import ctaBg from "@/assets/final-cta-bg.svg";
 export const Route = createFileRoute("/gewerbegas")({
   head: () => ({
     meta: [
-      { title: "Gewerbegas persönlich prüfen | Energie Entwurf" },
+      { title: "Gewerbegas persönlich prüfen | Entwurf Energie" },
       {
         name: "description",
         content:
-          "Energie Entwurf prüft Gewerbegastarife für Gastronomie, Handwerk, Produktion und mehrere Standorte persönlich.",
+          "Entwurf Energie prüft Gewerbegastarife für Gastronomie, Handwerk, Produktion und mehrere Standorte persönlich.",
       },
-      { property: "og:title", content: "Gewerbegas vergleichen | Energie Entwurf" },
+      { property: "og:title", content: "Gewerbegas vergleichen | Entwurf Energie" },
       {
         property: "og:description",
         content:
@@ -83,7 +83,7 @@ function GewerbegasPage() {
             Gas für Ihr Unternehmen. <span className="text-success">Planbar und verständlich.</span>
           </>
         }
-        lead="Vom Restaurant bis zur Produktion: Energie Entwurf erfasst Ihren Bedarf und ordnet verfügbare Gewerbegastarife verständlich ein."
+        lead="Vom Restaurant bis zur Produktion: Entwurf Energie erfasst Ihren Bedarf und ordnet verfügbare Gewerbegastarife verständlich ein."
         image={heroImg}
         imageAlt="Illustration eines Wohnhauses mit Energiespeicher"
         Icon={Building2}
@@ -95,7 +95,7 @@ function GewerbegasPage() {
       />
 
       <FeatureGrid
-        title="Warum Gewerbegas über Energie Entwurf?"
+        title="Warum Gewerbegas über Entwurf Energie?"
         intro="Sechs Gründe, warum Sie Ihren Gastarif mit uns prüfen sollten."
         items={features}
       />

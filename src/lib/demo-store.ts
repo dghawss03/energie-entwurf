@@ -69,7 +69,7 @@ export function createDemoState(): DemoState {
     profileId: `demo-profile-${i}`,
     authUserId: `demo-user-${i}`,
     role,
-    full_name: ["Alex Beispiel", "Kim Muster", "Robin Demo"][i],
+    full_name: ["Alex Keller", "Kim Wendt", "Robin Sommer"][i],
     email: `${role}@example.com`,
     is_active: true,
     phone: null,
@@ -104,11 +104,14 @@ export function createDemoState(): DemoState {
     return {
       id: leadId,
       lead_number: i < 6 ? `DEMAAA${i + 2}` : `DEMB${"ABCDEFGHJKLMNPQRSTUVWXYZ"[i]}AA`,
-      first_name: ["Lena", "Noah", "Mila", "Demo", "Finn", "Alex"][i % 6],
-      last_name: i % 6 === 3 ? `Büro Musterfeld ${i} (fiktiv)` : `Beispiel ${i + 1} (Demo)`,
+      first_name: ["Lena", "Noah", "Mila", "Jonas", "Finn", "Alex"][i % 6],
+      last_name:
+        i % 6 === 3
+          ? `Büro Musterfeld ${i}`
+          : ["Keller", "Wendt", "Sommer", "Mertens", "Falk", "Berg"][i % 6],
       email: `haushalt${i + 1}@example.com`,
       phone: `00000 ${String(100000 + i)}`,
-      source: i % 3 === 0 ? "Website-Demo" : i % 3 === 1 ? "Empfehlung" : "Backoffice-Demo",
+      source: i % 3 === 0 ? "Website" : i % 3 === 1 ? "Empfehlung" : "Backoffice",
       status,
       score: 45 + (i % 6) * 9,
       score_label: i % 6 > 3 ? "hot" : "warm",
@@ -116,7 +119,7 @@ export function createDemoState(): DemoState {
       customer_type: i % 6 === 3 ? "business" : "private",
       assigned_to: profiles[i % 3].authUserId,
       wiedervorlage_at: status === "follow_up" ? dates.created_at : null,
-      wiedervorlage_note: status === "follow_up" ? "Fiktiver Rückruf zur Demonstration" : null,
+      wiedervorlage_note: status === "follow_up" ? "Rückruf zur Tarifauswahl" : null,
       ...dates,
       addresses: [
         {
@@ -144,7 +147,7 @@ export function createDemoState(): DemoState {
           living_area_sqm: null,
           heating_type: null,
           hot_water_with_gas: null,
-          current_provider: "Beispiel Energie",
+          current_provider: "Regionalversorgung",
           current_tariff: "Muster 12",
           monthly_payment: 110,
           contract_end_date: null,
@@ -157,7 +160,7 @@ export function createDemoState(): DemoState {
   const providers: BackendProvider[] = [
     {
       id: "00000000-0000-4000-8000-000000000001",
-      name: "Beispiel Energie",
+      name: "Regionalversorgung",
       energy_type: "beide",
       rating: 4.5,
       is_partner: true,
@@ -166,7 +169,7 @@ export function createDemoState(): DemoState {
     },
   ];
   providers.push(
-    ...["Demo Versorger Nord", "Demo Versorger Süd"].map((name, i) => ({
+    ...["Anbieter Nord", "Anbieter Süd"].map((name, i) => ({
       id: "00000000-0000-4000-8000-00000000000" + (i + 2),
       name,
       energy_type: "beide" as const,
@@ -180,7 +183,7 @@ export function createDemoState(): DemoState {
     (energy_type, i) => ({
       id: `demo-tariff-${i}`,
       provider_id: providers[Math.floor(i / 2)].id,
-      name: `Demo ${energy_type} ${i < 4 ? "Privat" : "Gewerbe"} 12`,
+      name: `${energy_type === "strom" ? "Strom" : "Gas"} ${i < 4 ? "Privat" : "Gewerbe"} 12`,
       energy_type,
       segment: i < 4 ? "privat" : "gewerbe",
       price_per_kwh: energy_type === "gas" ? 9 + Math.floor(i / 2) * 0.3 : 29 + Math.floor(i / 2),
@@ -214,16 +217,16 @@ export function createDemoState(): DemoState {
       .split("-")
       .map((word) => word[0].toUpperCase() + word.slice(1))
       .join(" "),
-    teaser: "Ein fiktiver Ratgeber für die lokale Demo. Alle Konditionen sind Beispiele.",
+    teaser: "Orientierung zu Preisen, Konditionen und den nächsten Schritten beim Anbieterwechsel.",
     tag: i % 2 ? "Gas" : "Strom",
     image: articleImage,
-    author: "Demo Redaktion",
+    author: "Entwurf Energie Redaktion",
     body: [
       {
-        heading: "Beispiel zur Tarifberatung",
+        heading: "Worauf es bei der Tarifwahl ankommt",
         paragraphs: [
-          "Dieser Artikel demonstriert die Redaktion. Preise, Anbieter und Rechenbeispiele sind frei erfunden.",
-          "Über die Angebotsstrecke können Sie eine lokale Beispielanfrage erstellen und im Mitarbeiterbereich bearbeiten.",
+          "Vergleichen Sie neben dem Arbeitspreis auch Grundpreis, Laufzeit und Preisgarantie. So lassen sich die jährlichen Kosten nachvollziehbar einordnen.",
+          "Erfassen Sie Verbrauch und Wünsche in der Angebotsstrecke. Im Vorgang behalten Sie Unterlagen, Angebote und nächste Schritte im Blick.",
         ],
       },
     ],
@@ -243,21 +246,19 @@ export function createDemoState(): DemoState {
     tariffs,
     articles,
     notes: [
-      ...leads
-        .slice(1)
-        .map((lead, i) => ({
-          id: `demo-seed-note-${i}`,
-          lead_id: lead.id,
-          created_by: profiles[i % 3].authUserId,
-          note: "Fiktives Beratungsszenario: Verbrauch und Wünsche prüfen, bei Bedarf eine Wiedervorlage setzen.",
-          is_important: i % 4 === 0,
-          ...stamp(),
-        })),
+      ...leads.slice(1).map((lead, i) => ({
+        id: `demo-seed-note-${i}`,
+        lead_id: lead.id,
+        created_by: profiles[i % 3].authUserId,
+        note: "Verbrauch und Wünsche prüfen, bei Bedarf eine Wiedervorlage setzen.",
+        is_important: i % 4 === 0,
+        ...stamp(),
+      })),
       {
         id: "demo-note",
         lead_id: leads[0].id,
         created_by: profiles[0].authUserId,
-        note: "Ausschließlich fiktiver Vorgang. Änderungen bleiben in diesem Browser.",
+        note: "Unterlagen zur Tarifprüfung erfassen und Verbrauch abgleichen.",
         ...stamp(),
       },
     ],
@@ -283,7 +284,7 @@ export function createDemoState(): DemoState {
       created_by: "demo-system",
       communication_type: "system",
       direction: "internal",
-      subject: "Fiktiver Beratungsvorgang angelegt",
+      subject: "Beratungsvorgang angelegt",
       content_summary: "Ausschließlich lokale Simulation; keine Nachricht versendet.",
       status: "success",
       external_id: null,
@@ -305,7 +306,7 @@ export function createDemoState(): DemoState {
         estimated_savings: 120,
         status: "sent",
         valid_until: null,
-        notes: "Fiktives Angebot, kein Vertragsabschluss",
+        notes: "Testumgebung: kein verbindliches Vertragsangebot.",
         ...stamp(),
       },
     ],
@@ -315,14 +316,14 @@ export function createDemoState(): DemoState {
       old_status: null,
       new_status: lead.status,
       changed_by: profiles[0].authUserId,
-      reason: "Fiktiver Ausgangszustand",
+      reason: "Vorgang angelegt",
       created_at: lead.created_at,
     })),
     templates: [
       {
         id: "demo-template",
-        name: "Demo Anfragebestätigung",
-        subject: "Ihre Beispielanfrage",
+        name: "Anfragebestätigung",
+        subject: "Ihre Anfrage",
         trigger_name: "Lead erstellt",
         body: "Diese Nachricht wird nur simuliert und nicht versendet.",
         is_active: true,
@@ -520,7 +521,7 @@ export async function storeDemoDocument(
 
 function requireProfile() {
   const profile = getDemoProfile();
-  if (!profile) throw new DemoError(401, "Bitte mit einem Demo-Konto anmelden.");
+  if (!profile) throw new DemoError(401, "Bitte mit einem Mitarbeiterkonto anmelden.");
   return profile;
 }
 function checkLead(profile: BackendProfile, lead: BackendLeadDetail) {
@@ -554,7 +555,9 @@ function communication(state: DemoState, leadId: string, subject: string, author
     communication_type: "system",
     direction: "internal",
     subject,
-    content_summary: "Nur lokal simuliert. Es wurde keine Nachricht versendet.",
+    content_summary: /simuliert|versand/i.test(subject)
+      ? "Testumgebung: Es wurde keine Nachricht versendet."
+      : "Vorgang in der Kundenverwaltung gespeichert.",
     status: "success",
     external_id: null,
     ...stamp(),
@@ -609,7 +612,7 @@ async function request(
       phone: payload.phone,
       product_type: payload.product_type,
       customer_type: payload.customer_type,
-      source: payload.referral_code ? "Empfehlung" : "Website-Demo",
+      source: payload.referral_code ? "Empfehlung" : "Website",
       status: "new",
       score: 55,
       score_label: "warm",
@@ -664,7 +667,7 @@ async function request(
       old_status: null,
       new_status: "new",
       changed_by: "demo-public",
-      reason: "Lokale Demoanfrage",
+      reason: "Anfrage angelegt",
       created_at: now(),
     });
     const note = [payload.ziele?.join(", "), payload.erreichbarkeit].filter(Boolean).join("\n");
@@ -752,7 +755,7 @@ async function request(
         if (action === "create_offer" || !offer) {
           const demand = lead.energy_demands?.[0];
           if (!demand?.annual_consumption_kwh)
-            throw new DemoError(400, "Für das Beispielangebot fehlen Verbrauchsangaben.");
+            throw new DemoError(400, "Für das Angebot fehlen Verbrauchsangaben.");
           const energyType = demand.energy_type === "gas" ? "gas" : "strom";
           const segment = lead.customer_type === "private" ? "privat" : "gewerbe";
           const candidates = state.tariffs.filter(
@@ -771,7 +774,7 @@ async function request(
           if (!tariff)
             throw new DemoError(
               400,
-              "Kein aktiver passender Demo-Tarif vorhanden. Bitte im Tarifkatalog ergänzen.",
+              "Kein aktiver passender Tarif vorhanden. Bitte im Tarifkatalog ergänzen.",
             );
           state.offers
             .filter((o) => o.lead_id === lead.id && ["draft", "sent"].includes(o.status))
@@ -797,7 +800,7 @@ async function request(
             status: "draft",
             valid_until: new Date(Date.now() + 14 * 86400000).toISOString(),
             notes:
-              "Fiktiver Tarifvergleich im Browser; bei Strom & Gas gilt dieses Beispiel für den ersten Energieträger. Kein Vertragsangebot.",
+              "Tarifberechnung für den ersten Energieträger. Testumgebung: kein verbindliches Vertragsangebot.",
             ...stamp(),
           };
           state.offers.unshift(offer);
@@ -810,10 +813,10 @@ async function request(
         state,
         lead.id,
         {
-          create_offer: "Demo-Angebot erstellt",
+          create_offer: "Angebot erstellt",
           send_offer: "Angebotsversand simuliert",
           email: "E-Mail-Versand simuliert",
-          reject: "Demo-Anfrage abgelehnt",
+          reject: "Anfrage abgelehnt",
         }[action],
         profile.authUserId,
       );
@@ -826,7 +829,7 @@ async function request(
           old_status: oldStatus,
           new_status: lead.status,
           changed_by: profile.authUserId,
-          reason: "Lokale Demoaktion",
+          reason: "Vorgang aktualisiert",
           created_at: now(),
         });
       }
@@ -959,7 +962,7 @@ async function request(
       const member: BackendProfile = {
         profileId: id(),
         authUserId: id(),
-        full_name: input.full_name ?? "Demo Mitglied",
+        full_name: input.full_name ?? "Neues Teammitglied",
         email: input.email,
         role: input.role,
         is_active: true,

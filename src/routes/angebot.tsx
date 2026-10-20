@@ -23,11 +23,11 @@ export const Route = createFileRoute("/angebot")({
   validateSearch: (s) => search.parse(s) ?? {},
   head: () => ({
     meta: [
-      { title: "Kostenlose Tarifprüfung | Energie Entwurf" },
+      { title: "Kostenlose Tarifprüfung | Entwurf Energie" },
       {
         name: "description",
         content:
-          "Persönliches Angebot für Strom oder Gas anfragen. Energie Entwurf prüft Ihre Angaben kostenlos und unverbindlich.",
+          "Persönliches Angebot für Strom oder Gas anfragen. Entwurf Energie prüft Ihre Angaben kostenlos und unverbindlich.",
       },
       { name: "robots", content: "noindex" },
     ],
@@ -42,7 +42,7 @@ const steps = [
   },
   {
     label: "Angebot erhalten",
-    desc: "Energie Entwurf prüft verfügbare Optionen anhand Ihrer Angaben und Wünsche.",
+    desc: "Entwurf Energie prüft verfügbare Optionen anhand Ihrer Angaben und Wünsche.",
   },
   {
     label: "In Ruhe entscheiden",
@@ -53,11 +53,11 @@ const steps = [
 const faqs = [
   {
     q: "Ist der Vergleich wirklich komplett kostenlos?",
-    a: "Die Demo ist kostenlos. Es entstehen keine Verträge, Provisionen oder Zahlungen.",
+    a: "Die Tarifprüfung ist kostenlos und unverbindlich.",
   },
   {
     q: "Muss ich selbst beim alten Anbieter kündigen?",
-    a: "Das hängt vom gewählten Angebot und Ihrer Vertragssituation ab. Auf Wunsch begleitet Energie Entwurf die Abstimmung mit dem bisherigen und dem neuen Anbieter.",
+    a: "Das hängt vom gewählten Angebot und Ihrer Vertragssituation ab. Auf Wunsch begleitet Entwurf Energie die Abstimmung mit dem bisherigen und dem neuen Anbieter.",
   },
   {
     q: "Gibt es eine Versorgungsunterbrechung beim Wechsel?",
@@ -92,7 +92,7 @@ function AngebotPage() {
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
           <Link
             to="/"
-            aria-label="Energie Entwurf Startseite"
+            aria-label="Entwurf Energie Startseite"
             className="rounded-md transition-opacity hover:opacity-80"
           >
             <BrandLogo priority className="w-[10.4rem] sm:w-[12.65rem]" />
@@ -105,7 +105,7 @@ function AngebotPage() {
             </span>
             <span className="inline-flex items-center gap-1.5">
               <ShieldCheck className="h-3.5 w-3.5 text-success" />
-              Fiktive Demodaten
+              Persönliche Tarifprüfung
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Users className="h-3.5 w-3.5 text-success" />
@@ -118,7 +118,7 @@ function AngebotPage() {
             className="inline-flex items-center gap-2 rounded-full border border-success/30 bg-success/10 px-4 py-2 text-sm font-semibold text-primary transition hover:bg-success/20"
           >
             <Phone className="h-4 w-4 text-success" />
-            <span className="hidden sm:inline">Demokontakt</span>
+            <span className="hidden sm:inline">Kontakt</span>
           </Link>
         </div>
       </header>
@@ -143,7 +143,7 @@ function AngebotPage() {
 
           {/* ≤ 20 words */}
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            Energie Entwurf ordnet Preis, Laufzeit und Konditionen verständlich ein. Sie
+            Entwurf Energie ordnet Preis, Laufzeit und Konditionen verständlich ein. Sie
             entscheiden, welches Angebot zu Ihrem Bedarf passt.
           </p>
 
@@ -186,7 +186,7 @@ function AngebotPage() {
           {/* DSGVO below the form — trust info at the point of data entry */}
           <p className="mt-3 flex flex-wrap items-center justify-center gap-1.5 px-2 text-center text-xs leading-relaxed text-muted-foreground">
             <Lock className="h-3.5 w-3.5 text-success" />
-            Lokal im Browser · Fiktive Demodaten · Kostenlos & unverbindlich
+            Persönliche Tarifprüfung · Kostenlos & unverbindlich
           </p>
         </motion.div>
       </section>
@@ -298,7 +298,7 @@ function AngebotPage() {
               <Lock className="h-3.5 w-3.5" /> Lokal im Browser
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <ShieldCheck className="h-3.5 w-3.5" /> Fiktive Demodaten
+              <ShieldCheck className="h-3.5 w-3.5" /> Persönliche Tarifprüfung
             </span>
             <span>Kostenlos & unverbindlich</span>
           </div>

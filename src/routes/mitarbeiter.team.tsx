@@ -138,7 +138,7 @@ function TeamPage() {
         isAdmin ? (
           <Button size="sm" onClick={() => setInviteOpen(true)}>
             <Plus className="mr-2 h-4 w-4" />
-            Demo-Mitglied anlegen
+            Mitarbeiter anlegen
           </Button>
         ) : undefined
       }

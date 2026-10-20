@@ -12,7 +12,7 @@ const columns: Col[] = [
       { to: "/strom", label: "Strom für Zuhause" },
       { to: "/angebot", label: "Stromtarif prüfen" },
       { to: "/gewerbestrom", label: "Gewerbestrom" },
-      { to: "/ablauf", label: "So begleitet Energie Entwurf" },
+      { to: "/ablauf", label: "So begleitet Entwurf Energie" },
     ],
   },
   {
@@ -34,10 +34,10 @@ const columns: Col[] = [
     ],
   },
   {
-    title: "Über Energie Entwurf",
+    title: "Über Entwurf Energie",
     links: [
       { to: "/ueber-uns", label: "Über uns" },
-      { to: "/freunde-werben", label: "Energie Entwurf empfehlen" },
+      { to: "/freunde-werben", label: "Entwurf Energie empfehlen" },
       { to: "/kontakt", label: "Kontakt" },
       { to: "/wissen", label: "Ratgeber" },
     ],
@@ -53,7 +53,7 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-start">
           <Link
             to="/"
-            aria-label="Energie Entwurf Startseite"
+            aria-label="Entwurf Energie Startseite"
             className="inline-flex w-full max-w-[18.4rem] rounded-lg transition-opacity hover:opacity-80 sm:max-w-[20.7rem]"
           >
             <BrandLogo className="w-full" />
@@ -103,10 +103,10 @@ export function Footer() {
               <span className="grid h-10 w-10 place-items-center rounded-full bg-success/10 text-success">
                 <Phone className="h-4 w-4" />
               </span>
-              Demokontakt
+              Kontakt
             </Link>
             <div className="mt-2 text-sm text-muted-foreground">
-              Direkter Kontakt zum Team von Energie Entwurf
+              Direkter Kontakt zum Team von Entwurf Energie
             </div>
           </div>
         </div>
@@ -115,7 +115,7 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-border bg-surface">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-5 text-xs text-muted-foreground">
-          <div>© {year} Energie Entwurf · Persönlich beraten · Transparent entscheiden</div>
+          <div>© {year} Entwurf Energie · Persönlich beraten · Transparent entscheiden</div>
           <div className="flex flex-wrap gap-x-6 gap-y-1">
             <Link to="/impressum" className="inline-flex min-h-8 items-center hover:text-success">
               Impressum

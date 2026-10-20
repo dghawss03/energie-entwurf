@@ -235,10 +235,6 @@ export function MultiStepForm({
 
   return (
     <div className="form-contrast w-full min-w-0 overflow-x-clip">
-      <p className="mb-4 text-sm text-muted-foreground">
-        Lokale Demo: Bitte nur erfundene Angaben und Beispieldokumente verwenden. Es erfolgt keine
-        Übertragung an Anbieter.
-      </p>
       <div
         className="pointer-events-none absolute -left-[10000px] h-px w-px overflow-hidden"
         aria-hidden="true"
@@ -256,7 +252,7 @@ export function MultiStepForm({
       </div>
       <div className="mb-6 flex items-center justify-between text-sm">
         <span className="font-medium text-primary">
-          Demo · Schritt {step} von {TOTAL_STEPS}
+          Schritt {step} von {TOTAL_STEPS}
         </span>
         <span className="text-muted-foreground">{Math.round((step / TOTAL_STEPS) * 100)} %</span>
       </div>
@@ -732,7 +728,7 @@ function Step5({ data, set }: StepProps) {
           <Label htmlFor="anbieter">Aktueller Anbieter</Label>
           <Input
             id="anbieter"
-            placeholder="z. B. Beispiel Energie (fiktiv)"
+            placeholder="Ihr aktueller Energieanbieter"
             value={data.aktuellerAnbieter ?? ""}
             onChange={(e) => set("aktuellerAnbieter", e.target.value)}
           />
@@ -931,9 +927,7 @@ function Step7({ data, set }: StepProps) {
             checked={!!data.kontaktAkzeptiert}
             onCheckedChange={(v) => set("kontaktAkzeptiert", !!v as true)}
           />
-          <span>
-            Ich verstehe, dass dies eine Demo ist und keine echte Kontaktaufnahme erfolgt.
-          </span>
+          <span>Ich habe die Hinweise zum Umgang mit meinen Angaben gelesen.</span>
         </label>
       </div>
     </Field>

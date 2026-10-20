@@ -383,7 +383,7 @@ export function ArticleEditor({ initial, onSave, isSaving = false }: ArticleEdit
   const [tag, setTag] = useState(initial?.tag ?? "Strom");
   const [teaser, setTeaser] = useState(initial?.teaser ?? "");
   const [image, setImage] = useState(initial?.image ?? "");
-  const [author, setAuthor] = useState(initial?.author ?? "Energie Entwurf Redaktion");
+  const [author, setAuthor] = useState(initial?.author ?? "Entwurf Energie Redaktion");
   const [readTimeMin, setReadTimeMin] = useState(initial?.read_time_min ?? 5);
   const [seoTitle, setSeoTitle] = useState(initial?.seo_title ?? "");
   const [seoDescription, setSeoDescription] = useState(initial?.seo_description ?? "");
@@ -563,7 +563,7 @@ export function ArticleEditor({ initial, onSave, isSaving = false }: ArticleEdit
                   id="article-author"
                   value={author}
                   onChange={(e) => setAuthor(e.target.value)}
-                  placeholder="Energie Entwurf Redaktion"
+                  placeholder="Entwurf Energie Redaktion"
                 />
               </div>
               <div className="space-y-1.5">

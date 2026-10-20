@@ -1,15 +1,15 @@
-// Original vector artwork for Energie Entwurf. No external images, fonts or marks.
+// Original vector artwork for Entwurf Energie. No external images, fonts or marks.
 import { writeFileSync } from "node:fs";
 
 const wrap = (body, width = 1600, height = 900) =>
-  `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><title>Energie Entwurf – eigene Demoillustration</title>${body}</svg>`;
+  `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"><title>Entwurf Energie – eigene Demoillustration</title>${body}</svg>`;
 const symbol = `<rect width="104" height="104" rx="28" fill="#88cc27"/><path d="M28 27h48v12H42v10h28v12H42v16H28z" fill="#0a1f44"/><path d="m65 48-12 19h12l-6 19 24-29H70l7-9z" fill="#0a1f44"/>`;
 for (const [variant, color] of [
   ["dark", "#0a1f44"],
   ["light", "#ffffff"],
 ]) {
   const logo = wrap(
-    `<g transform="translate(5 17)">${symbol}</g><text x="135" y="85" fill="${color}" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="50" letter-spacing="-1.8">Energie Entwurf</text>`,
+    `<g transform="translate(5 17)">${symbol}</g><text x="135" y="85" fill="${color}" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="50" letter-spacing="-1.8">Entwurf Energie</text>`,
     540,
     138,
   );
@@ -19,7 +19,7 @@ writeFileSync("src/assets/energie-entwurf-icon.svg", wrap(symbol, 104, 104));
 writeFileSync(
   "public/social-card.svg",
   wrap(
-    `<rect width="1200" height="630" fill="#0a1f44"/><circle cx="1150" cy="70" r="340" fill="#88cc27" opacity=".13"/><g transform="translate(80 100) scale(1.05)">${symbol}</g><text x="80" y="325" font-family="Arial,sans-serif" font-size="76" font-weight="700" fill="white">Energie Entwurf</text><text x="84" y="390" font-family="Arial,sans-serif" font-size="28" fill="#dceac9">Energievergleiche. Digitale Kundenverwaltung.</text><text x="84" y="535" font-family="Arial,sans-serif" font-size="23" fill="#88cc27">Demo-Projekt von dghWeb</text><text x="84" y="575" font-family="Arial,sans-serif" font-size="20" fill="#dceac9">Nicht für echte Vertragsanfragen</text>`,
+    `<rect width="1200" height="630" fill="#0a1f44"/><circle cx="1150" cy="70" r="340" fill="#88cc27" opacity=".13"/><g transform="translate(80 100) scale(1.05)">${symbol}</g><text x="80" y="325" font-family="Arial,sans-serif" font-size="76" font-weight="700" fill="white">Entwurf Energie</text><text x="84" y="390" font-family="Arial,sans-serif" font-size="28" fill="#dceac9">Energievergleiche. Digitale Kundenverwaltung.</text><text x="84" y="535" font-family="Arial,sans-serif" font-size="23" fill="#88cc27">Website-Entwurf von dghWeb</text><text x="84" y="575" font-family="Arial,sans-serif" font-size="20" fill="#dceac9">In Entwicklung · nicht final</text>`,
     1200,
     630,
   ),
@@ -104,7 +104,7 @@ writeFileSync(
     op: 120,
     w: 600,
     h: 420,
-    nm: "Energie Entwurf – Energiefluss",
+    nm: "Entwurf Energie – Energiefluss",
     ddd: 0,
     assets: [],
     layers,

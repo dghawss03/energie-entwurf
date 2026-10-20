@@ -4,44 +4,32 @@ import { StaticPage } from "@/components/site/StaticPage";
 export const Route = createFileRoute("/impressum")({
   head: () => ({
     meta: [
-      { title: "Impressum | Energie Entwurf" },
+      { title: "Impressum | Entwurf Energie" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
   component: () => (
     <StaticPage
       title="Impressum"
-      lead="Vorbereiteter Prüfentwurf. Die markierten Betreiberfelder müssen vor Veröffentlichung ausgefüllt und auf ihre Anwendbarkeit geprüft werden."
+      lead="Impressum – Prüfentwurf. Die markierten Angaben sind vor Veröffentlichung zu vervollständigen."
     >
       <p className="text-xs leading-relaxed text-muted-foreground">
-        Diese Seite ist Bestandteil einer Demonstrationswebsite. Die Angaben sind beispielhaft und
-        werden bei einer tatsächlichen Umsetzung individuell ergänzt.
+        Rechtstext in Vorbereitung. Markierte Unternehmensangaben werden vor Veröffentlichung
+        vervollständigt.
       </p>
-      <h2>Fiktive Demo: Energie Entwurf</h2>
+      <h2>Unternehmensangaben – Kundenentwurf</h2>
       <p>
-        Energie Entwurf bezeichnet ausschließlich das fiktive Energieunternehmen innerhalb dieses
-        Demo- und Präsentationsprojekts von dghWeb für potenzielle Kunden. Die dargestellten Tarife,
-        Anbieter und CRM-Vorgänge sind Beispiele. Es werden keine echten Energielieferverträge,
-        Vermittlungen oder Vertragsabschlüsse angeboten.
+        Entwurf Energie ist der Unternehmensname dieses Kundenentwurfs. Die nachfolgenden
+        Musterfelder gehören zur Kundenwebsite und benennen nicht den tatsächlichen Betreiber dieser
+        Testversion.
       </p>
-      <h2>Beispiel eines Kundenimpressums – ausschließlich fiktiv</h2>
       <ul>
-        <li>Unternehmensname: Energie Entwurf (fiktiv)</li>
-        <li>Firmenanschrift: [Firmenanschrift ergänzen – nur Demo-Platzhalter]</li>
-        <li>Kontakt: [Kontaktdaten ergänzen – nur Demo-Platzhalter]</li>
-        <li>Vertretung / Register: [Angaben bei einer tatsächlichen Kundenumsetzung ergänzen]</li>
+        <li>Firma: Entwurf Energie</li>
+        <li>Anschrift: [Firmenanschrift ergänzen]</li>
+        <li>Kontakt: [Kontaktdaten ergänzen]</li>
+        <li>Vertretung / Register: [Unternehmensangaben ergänzen]</li>
       </ul>
-      <p>
-        Dieser Beispielblock ist kein Betreiberimpressum der tatsächlich veröffentlichten Website.
-      </p>
-      <p>
-        Das fiktive Demo-Unternehmen ist nicht der tatsächliche Website-Betreiber. Demo-Namen,
-        Beispielanschriften und Adressen mit example.com innerhalb der Anwendung sind keine
-        Betreiberangaben und keine erreichbaren Kontaktstellen. Die Projektbezeichnung dghWeb legt
-        allein keine verantwortliche Person oder Gesellschaft fest.
-      </p>
-
-      <h2>Tatsächlicher Demo-Betreiber: dghWeb – auszufüllende Angaben</h2>
+      <h2>Tatsächlicher Website-Betreiber: dghWeb</h2>
       <p>
         <strong>
           Platzhalter: Hier ausschließlich die echten Angaben des für diese Website verantwortlichen
@@ -105,7 +93,7 @@ export const Route = createFileRoute("/impressum")({
         das fiktive Unternehmen.
       </p>
       <p>
-        Logo, Illustrationen und Energiefluss-Animation wurden für Energie Entwurf erstellt.
+        Logo, Illustrationen und Energiefluss-Animation wurden für Entwurf Energie erstellt.
         Technische Bibliotheken und Schriften behalten ihre jeweiligen Lizenzen.
       </p>
       <p className="text-xs text-muted-foreground">

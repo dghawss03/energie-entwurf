@@ -19,15 +19,15 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/ablauf")({
   head: () => ({
     meta: [
-      { title: "Ablauf: So funktioniert der Tarifwechsel | Energie Entwurf" },
+      { title: "Ablauf: So funktioniert der Tarifwechsel | Entwurf Energie" },
       {
         name: "description",
         content:
-          "So begleitet Energie Entwurf Ihre Tarifprüfung: Anfrage, persönliche Einordnung, Angebot und Wechselunterstützung.",
+          "So begleitet Entwurf Energie Ihre Tarifprüfung: Anfrage, persönliche Einordnung, Angebot und Wechselunterstützung.",
       },
       {
         property: "og:title",
-        content: "Ablauf: So funktioniert der Tarifwechsel | Energie Entwurf",
+        content: "Ablauf: So funktioniert der Tarifwechsel | Entwurf Energie",
       },
       {
         property: "og:description",
@@ -83,7 +83,7 @@ const steps = [
     kicker: "Schritt 4",
     title: "Wechsel auf Wunsch",
     duration: "abhängig vom Vertrag",
-    desc: "Wenn Sie das Angebot annehmen, unterstützt Energie Entwurf bei den vereinbarten nächsten Schritten zum Anbieterwechsel.",
+    desc: "Wenn Sie das Angebot annehmen, unterstützt Entwurf Energie bei den vereinbarten nächsten Schritten zum Anbieterwechsel.",
     bullets: [
       "Bestehende Laufzeit berücksichtigen",
       "Erforderliche Daten strukturiert übermitteln",
@@ -106,7 +106,7 @@ const guarantees = [
   {
     icon: Clock,
     title: "Persönliche Begleitung",
-    desc: "Fragen und nächste Schritte besprechen Sie direkt mit dem Team von Energie Entwurf.",
+    desc: "Fragen und nächste Schritte besprechen Sie direkt mit dem Team von Entwurf Energie.",
   },
 ];
 
@@ -121,7 +121,7 @@ function AblaufPage() {
             {...fadeUp}
             className="inline-flex items-center gap-2 rounded-full border border-success/30 bg-success/10 px-4 py-1.5 text-xs font-medium text-success"
           >
-            <Sparkles className="h-3.5 w-3.5" /> So begleitet Energie Entwurf
+            <Sparkles className="h-3.5 w-3.5" /> So begleitet Entwurf Energie
           </motion.div>
           <motion.h1
             {...fadeUp}
@@ -163,7 +163,7 @@ function AblaufPage() {
       <section className="mx-auto max-w-6xl px-4 py-20 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold text-primary md:text-4xl">
-            Ihr Weg mit Energie Entwurf
+            Ihr Weg mit Entwurf Energie
           </h2>
           <p className="mt-4 text-muted-foreground">
             Vier klare Etappen. Sie behalten jederzeit den Überblick und treffen die Entscheidung.
@@ -216,7 +216,7 @@ function AblaufPage() {
               Darauf können Sie sich verlassen
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Drei Grundsätze für jede Tarifprüfung mit Energie Entwurf.
+              Drei Grundsätze für jede Tarifprüfung mit Entwurf Energie.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">

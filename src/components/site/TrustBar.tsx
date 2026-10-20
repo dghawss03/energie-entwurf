@@ -2,7 +2,7 @@ import { ShieldCheck, Lock, BadgeCheck, Zap, HeartHandshake } from "lucide-react
 
 const items = [
   { icon: BadgeCheck, label: "Kostenlose Anfrage" },
-  { icon: Lock, label: "Fiktive Demodaten" },
+  { icon: Lock, label: "Persönliche Tarifprüfung" },
   { icon: ShieldCheck, label: "Transparente Konditionen" },
   { icon: Zap, label: "Sicherer Anbieterwechsel" },
   { icon: HeartHandshake, label: "Persönliche Beratung" },

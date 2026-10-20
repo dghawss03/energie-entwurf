@@ -12,7 +12,7 @@ export function BrandLogo({ className, priority = false, variant = "black" }: Br
   return (
     <img
       src={variant === "white" ? whiteLogoUrl : blackLogoUrl}
-      alt="Energie Entwurf"
+      alt="Entwurf Energie"
       width={540}
       height={138}
       loading={priority ? "eager" : "lazy"}

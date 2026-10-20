@@ -20,13 +20,13 @@ import ctaBg from "@/assets/final-cta-bg.svg";
 export const Route = createFileRoute("/solar")({
   head: () => ({
     meta: [
-      { title: "Solar & Wärmepumpe verständlich planen | Energie Entwurf" },
+      { title: "Solar & Wärmepumpe verständlich planen | Entwurf Energie" },
       {
         name: "description",
         content:
           "Erste Orientierung zu Photovoltaik, Stromspeicher und Wärmepumpe – verständlich erklärt und auf Ihre Immobilie bezogen.",
       },
-      { property: "og:title", content: "Solar & Wärmepumpe | Energie Entwurf" },
+      { property: "og:title", content: "Solar & Wärmepumpe | Entwurf Energie" },
       {
         property: "og:description",
         content: "Persönliche Orientierung zu Solaranlage, Stromspeicher und Wärmepumpe.",
@@ -79,7 +79,7 @@ function SolarPage() {
       <TopicHero
         kicker="Eigene Energie produzieren"
         title={<>Ihre Energie zuhause neu denken.</>}
-        lead="Photovoltaik, Stromspeicher und Wärmepumpe gehören zusammen gedacht. Energie Entwurf schafft eine verständliche erste Orientierung."
+        lead="Photovoltaik, Stromspeicher und Wärmepumpe gehören zusammen gedacht. Entwurf Energie schafft eine verständliche erste Orientierung."
         image={heroImg}
         imageAlt="Illustration eines Hauses mit Solarmodulen"
         Icon={Sun}

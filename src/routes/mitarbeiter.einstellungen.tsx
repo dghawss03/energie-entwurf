@@ -141,7 +141,7 @@ function SettingsPage() {
         variant="outline"
         className="mb-4"
         onClick={async () => {
-          if (!window.confirm("Alle lokalen Demoänderungen und Dokumente löschen?")) return;
+          if (!window.confirm("Alle gespeicherten Vorgänge und Dokumente dieser Testumgebung löschen?")) return;
           try {
             await resetDemo();
             window.location.assign("/mitarbeiter/login");
@@ -150,7 +150,7 @@ function SettingsPage() {
           }
         }}
       >
-        Demo zurücksetzen
+        Testumgebung zurücksetzen
       </Button>
       <div className="grid gap-6 lg:grid-cols-2">
         {/* ── PROFIL ─────────────────────────────────────────────────────── */}
@@ -181,7 +181,7 @@ function SettingsPage() {
               <Label htmlFor="email">E-Mail</Label>
               <Input id="email" type="email" value={email} disabled className="bg-muted/40" />
               <p className="text-xs text-muted-foreground">
-                Lokales Demo-Profil; keine externen Konten oder Nachrichten.
+                Ihre persönlichen Profileinstellungen.
               </p>
             </div>
             <div className="space-y-1.5">

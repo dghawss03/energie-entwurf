@@ -1,4 +1,4 @@
-# Energie Entwurf – lokale Demo
+# Entwurf Energie – lokale Demo
 
 Die Demo verwendet React, TypeScript, TanStack Start/Router und Vite. Für GitHub Pages entsteht ein statischer SPA-Build unter `/energie-entwurf/`. Navigation, Layout und lokale Demofunktionen bleiben erhalten.
 
@@ -101,3 +101,7 @@ Automatisierte Routingtests verwenden den tatsächlichen Routenbaum mit dem Page
 ## Marke und Assets
 
 Demo-Projekt von dghWeb – nicht für echte Vertragsanfragen. Neue Assets lassen sich mit `node scripts/generate-brand-assets.mjs` reproduzieren. Details zur Herkunft und Prüfung stehen in docs/REBRANDING.md. Keine Fotos, Logos oder Animationen des früheren Betreibers werden weiterverwendet.
+
+## Kundenentwurf
+
+Die sichtbare Marke lautet Entwurf Energie; Repository- und Hostingpfad `/energie-entwurf/` sowie vorhandene Speicherschlüssel bleiben für bestehende Links und Vorgänge erhalten. Der obere Hinweis kennzeichnet die Website als Entwurf von dghWeb. Formularbestätigung und simulierte Versand-/Prämienaktionen benennen weiterhin, dass keine externe Übertragung, Bearbeitung oder Auszahlung stattfindet. Die rechtlichen Seiten bleiben vorbereitete Entwürfe mit getrennten Kunden- und Betreiberangaben.

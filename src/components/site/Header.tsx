@@ -31,7 +31,7 @@ const mainNav: NavItem[] = [
         { label: "Haushaltsstrom", to: "/strom" },
         { label: "Gewerbestrom", to: "/gewerbestrom" },
         { label: "Stromtarif prüfen", to: "/angebot" },
-        { label: "Wechsel mit Energie Entwurf", to: "/ablauf" },
+        { label: "Wechsel mit Entwurf Energie", to: "/ablauf" },
       ],
     },
   },
@@ -45,7 +45,7 @@ const mainNav: NavItem[] = [
         { label: "Gas für Zuhause", to: "/gas" },
         { label: "Gewerbegas", to: "/gewerbegas" },
         { label: "Gastarif prüfen", to: "/angebot" },
-        { label: "Wechsel mit Energie Entwurf", to: "/ablauf" },
+        { label: "Wechsel mit Entwurf Energie", to: "/ablauf" },
       ],
     },
   },
@@ -70,7 +70,7 @@ const mainNav: NavItem[] = [
       mainLinks: [
         { label: "Persönlich beraten lassen", to: "/kontakt" },
         { label: "Hilfe & FAQ", to: "/faq" },
-        { label: "Energie Entwurf empfehlen", to: "/freunde-werben" },
+        { label: "Entwurf Energie empfehlen", to: "/freunde-werben" },
       ],
     },
   },
@@ -137,7 +137,7 @@ export function Header() {
         <div className="grid grid-cols-[auto_1fr_auto] items-center gap-4 py-3 md:py-4">
           <Link
             to="/"
-            aria-label="Energie Entwurf Startseite"
+            aria-label="Entwurf Energie Startseite"
             className="flex items-center rounded-md transition-opacity hover:opacity-80"
           >
             <BrandLogo priority className="w-[11.5rem] sm:w-[13.8rem]" />
@@ -151,7 +151,7 @@ export function Header() {
               className="hidden items-center gap-2 text-sm font-semibold text-primary transition hover:text-success md:inline-flex"
             >
               <Phone className="h-4 w-4 text-success" />
-              <span>Demokontakt</span>
+              <span>Kontakt</span>
             </Link>
             <Link
               to="/freunde-werben"
@@ -366,7 +366,7 @@ export function Header() {
                   onClick={() => setMobileOpen(false)}
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-3 py-2 text-sm font-semibold text-primary"
                 >
-                  <Phone className="h-4 w-4 text-success" /> Demokontakt
+                  <Phone className="h-4 w-4 text-success" /> Kontakt
                 </Link>
                 <Link
                   to="/angebot"

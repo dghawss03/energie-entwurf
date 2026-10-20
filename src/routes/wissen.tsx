@@ -12,13 +12,13 @@ import type { BlogArticle } from "@/lib/api-types";
 export const Route = createFileRoute("/wissen")({
   head: () => ({
     meta: [
-      { title: "Wissen: Ratgeber rund um Energie | Energie Entwurf" },
+      { title: "Wissen: Ratgeber rund um Energie | Entwurf Energie" },
       {
         name: "description",
         content:
           "Ratgeber, Erklärartikel und Marktupdates rund um Strom, Gas, Solar und Wärmepumpe. Verständlich geschrieben, sorgfältig recherchiert.",
       },
-      { property: "og:title", content: "Energiewissen und Ratgeber | Energie Entwurf" },
+      { property: "og:title", content: "Energiewissen und Ratgeber | Entwurf Energie" },
       {
         property: "og:description",
         content: "Verständlich erklärt: Strom, Gas, Solar, Wärmepumpe und mehr.",
@@ -109,7 +109,7 @@ function WissenIndex() {
       <TopicHero
         kicker="Energie verstehen"
         title={<>Energie verstehen. Besser entscheiden.</>}
-        lead="Energie Entwurf erklärt Tarife, Vertragsdetails und aktuelle Energiethemen verständlich. Damit Sie wissen, worauf es bei Ihrer Entscheidung ankommt."
+        lead="Entwurf Energie erklärt Tarife, Vertragsdetails und aktuelle Energiethemen verständlich. Damit Sie wissen, worauf es bei Ihrer Entscheidung ankommt."
         image={heroImg}
         imageAlt="Illustration eines Dokuments mit Energiekennzahlen"
         Icon={BookOpen}
@@ -239,7 +239,7 @@ function WissenIndex() {
                 Möchten Sie Ihren Tarif persönlich prüfen lassen?
               </h2>
               <p className="mt-3 text-primary-foreground/80">
-                Übermitteln Sie Ihre Angaben kostenlos. Das Team von Energie Entwurf ordnet passende
+                Übermitteln Sie Ihre Angaben kostenlos. Das Team von Entwurf Energie ordnet passende
                 Angebote und Konditionen für Sie ein.
               </p>
             </div>

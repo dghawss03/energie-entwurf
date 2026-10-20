@@ -19,13 +19,13 @@ import ctaBg from "@/assets/final-cta-bg.svg";
 export const Route = createFileRoute("/strom-gas")({
   head: () => ({
     meta: [
-      { title: "Strom & Gas gemeinsam prüfen | Energie Entwurf" },
+      { title: "Strom & Gas gemeinsam prüfen | Entwurf Energie" },
       {
         name: "description",
         content:
-          "Energie Entwurf prüft Strom und Gas gemeinsam und stellt kombinierte Angebote den passenden Einzeltarifen gegenüber.",
+          "Entwurf Energie prüft Strom und Gas gemeinsam und stellt kombinierte Angebote den passenden Einzeltarifen gegenüber.",
       },
-      { property: "og:title", content: "Strom & Gas gemeinsam prüfen | Energie Entwurf" },
+      { property: "og:title", content: "Strom & Gas gemeinsam prüfen | Entwurf Energie" },
       {
         property: "og:description",
         content: "Gemeinsam oder getrennt: Wir ordnen beide Möglichkeiten verständlich ein.",
@@ -68,7 +68,7 @@ const features = [
   {
     icon: Users,
     title: "Persönliche Beratung",
-    desc: "Energie Entwurf bespricht mit Ihnen, welche Variante besser zu Ihrem Haushalt passt.",
+    desc: "Entwurf Energie bespricht mit Ihnen, welche Variante besser zu Ihrem Haushalt passt.",
   },
 ];
 
@@ -78,7 +78,7 @@ function StromGasPage() {
       <TopicHero
         kicker="Gemeinsam oder getrennt"
         title={<>Strom & Gas passend zusammenstellen.</>}
-        lead="Ein gemeinsamer Tarif kann praktisch sein. Zwei Einzeltarife können wirtschaftlicher sein. Energie Entwurf prüft beide Wege."
+        lead="Ein gemeinsamer Tarif kann praktisch sein. Zwei Einzeltarife können wirtschaftlicher sein. Entwurf Energie prüft beide Wege."
         image={heroImg}
         imageAlt="Illustration von Gebäuden und Energieinfrastruktur"
         Icon={Layers}
@@ -106,7 +106,7 @@ function StromGasPage() {
 
       <FinalCta
         title="Lohnt sich ein Bundle für Sie?"
-        body="Senden Sie Ihre Eckdaten. Energie Entwurf prüft, welche gemeinsame oder getrennte Lösung verfügbar und nachvollziehbar ist."
+        body="Senden Sie Ihre Eckdaten. Entwurf Energie prüft, welche gemeinsame oder getrennte Lösung verfügbar und nachvollziehbar ist."
         image={ctaBg}
       />
     </SiteLayout>

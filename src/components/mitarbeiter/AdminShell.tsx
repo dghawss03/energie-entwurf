@@ -159,7 +159,7 @@ export function AdminShell({
             <SheetContent side="left" className="flex h-dvh w-[min(90vw,20rem)] flex-col p-4">
               <SheetHeader className="pr-6 text-left">
                 <SheetTitle>Mitarbeiter CRM</SheetTitle>
-                <SheetDescription>Navigation und lokale Demo-Verwaltung</SheetDescription>
+                <SheetDescription>Navigation und Kundenverwaltung</SheetDescription>
               </SheetHeader>
               <nav
                 aria-label="Mobile CRM-Navigation"

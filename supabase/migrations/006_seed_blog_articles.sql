@@ -1,13 +1,13 @@
--- Energie Entwurf: ausschließlich selbst formulierte, fiktive Referenzinhalte.
+-- Entwurf Energie: ausschließlich selbst formulierte, fiktive Referenzinhalte.
 -- Archivschema, nicht für die lokale Demo ausführen.
 INSERT INTO public.blog_articles (slug, title, teaser, image, tag, author, body, read_time_min, is_published, published_at)
 SELECT seed.slug, seed.title,
   'Fiktiver Ratgeber zur lokalen Demo. Keine aktuellen Marktangebote oder Beratung.',
-  '/social-card.svg', 'Demo', 'Energie Entwurf Redaktion',
+  '/social-card.svg', 'Demo', 'Entwurf Energie Redaktion',
   jsonb_build_array(jsonb_build_object(
     'heading', 'So funktioniert dieses Beispiel',
     'paragraphs', jsonb_build_array(
-      'Energie Entwurf demonstriert Energievergleiche und digitale Kundenverwaltung mit fiktiven Daten.',
+      'Entwurf Energie demonstriert Energievergleiche und digitale Kundenverwaltung mit fiktiven Daten.',
       'Anfragen, Dokumente und Bearbeitungsschritte bleiben lokal im Browser. Es gibt keinen echten Vertragsabschluss.'
     )
   )), 2, true, now()

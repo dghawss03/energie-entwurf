@@ -17,7 +17,7 @@ export const Route = createFileRoute("/mitarbeiter/login")({
   },
   head: () => ({
     meta: [
-      { title: "Login – Energie Entwurf Mitarbeiter" },
+      { title: "Login – Entwurf Energie Mitarbeiter" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
@@ -67,13 +67,13 @@ function LoginPage() {
             Kunden glücklich machen.
           </h2>
           <p className="mt-4 max-w-md text-primary-foreground/80">
-            Lokale Simulation mit fiktiven Daten. Es werden keine echten Konten verwendet.
+            Alle Anfragen, Angebote und Aufgaben an einem Ort.
           </p>
           <div className="mt-8 flex items-center gap-2 text-sm text-primary-foreground/80">
-            <ShieldCheck className="h-4 w-4" /> Demo-Zugang · keine produktive Anmeldung
+            <ShieldCheck className="h-4 w-4" /> Ihr Zugang zur Kundenverwaltung
           </div>
         </motion.div>
-        <div className="text-xs text-primary-foreground/60">© 2026 Energie Entwurf</div>
+        <div className="text-xs text-primary-foreground/60">© 2026 Entwurf Energie</div>
       </div>
 
       <div className="flex items-center justify-center p-6 sm:p-12">
@@ -86,7 +86,7 @@ function LoginPage() {
           <div>
             <h1 className="text-2xl font-semibold tracking-tight">Willkommen zurück</h1>
             <p className="mt-1 text-sm text-muted-foreground">
-              Lokaler Demo-Zugang: admin@example.com, manager@example.com oder employee@example.com.
+              Testzugang: admin@example.com, manager@example.com oder employee@example.com.
               Passwort: Demo2026!
             </p>
           </div>
@@ -157,7 +157,7 @@ function LoginPage() {
             variant="outline"
             className="w-full"
             onClick={async () => {
-              if (!window.confirm("Alle lokalen Demoänderungen und Dokumente löschen?")) return;
+              if (!window.confirm("Alle gespeicherten Vorgänge und Dokumente dieser Testumgebung löschen?")) return;
               try {
                 await resetDemo();
                 setError(null);
@@ -166,7 +166,7 @@ function LoginPage() {
               }
             }}
           >
-            Demo zurücksetzen
+            Testumgebung zurücksetzen
           </Button>
           <p className="text-center text-xs text-muted-foreground">
             Probleme?{" "}

@@ -1,3 +1,4 @@
+import { sitePath } from "@/lib/site-url";
 import energyFlowUrl from "@/assets/energy-flow.json?url";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { motion } from "framer-motion";
@@ -69,20 +70,20 @@ export const Route = createFileRoute("/")({
   validateSearch: (s) => homeSearchSchema.parse(s) ?? {},
   head: () => ({
     meta: [
-      { title: "Energie Entwurf | Tarife für Strom und Gas persönlich prüfen" },
+      { title: "Entwurf Energie | Tarife für Strom und Gas persönlich prüfen" },
       {
         name: "description",
         content:
-          "Demo von dghWeb: Energievergleiche für Strom und Gas sowie digitale Kundenverwaltung mit fiktiven Daten entdecken.",
+          "Strom und Gas vergleichen, Konditionen verstehen und passende Angebote für Ihren Verbrauch finden.",
       },
       {
         property: "og:title",
-        content: "Energie Entwurf | Tarife für Strom und Gas persönlich prüfen",
+        content: "Entwurf Energie | Tarife für Strom und Gas persönlich prüfen",
       },
       {
         property: "og:description",
         content:
-          "Demo von dghWeb: Energievergleiche für Strom und Gas sowie digitale Kundenverwaltung mit fiktiven Daten entdecken.",
+          "Strom und Gas vergleichen, Konditionen verstehen und passende Angebote für Ihren Verbrauch finden.",
       },
     ],
   }),
@@ -191,8 +192,8 @@ function Hero() {
               </span>
             </h1>
             <p className="mt-4 max-w-xl text-base font-semibold leading-relaxed text-muted-foreground md:mt-5 md:text-lg">
-              Energievergleiche und digitale Kundenverwaltung erleben – mit fiktiven Tarifen und
-              lokalen Demoanfragen.
+              Finden Sie passende Tarife für Strom und Gas – mit klaren Konditionen und persönlicher
+              Begleitung.
             </p>
 
             <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-[15px] font-semibold text-muted-foreground md:mt-6">
@@ -520,7 +521,7 @@ function QuickCalculator() {
 function TrustStrip() {
   const items = [
     { icon: BadgeCheck, label: "Kostenlos" },
-    { icon: ShieldCheck, label: "Lokale Demoanfrage" },
+    { icon: ShieldCheck, label: "Unverbindliche Anfrage" },
     { icon: Award, label: "Manuelle Tarifprüfung" },
     { icon: CheckCircle2, label: "Begleitung beim Wechsel" },
     { icon: PhoneCall, label: "Persönlicher Ansprechpartner" },
@@ -560,7 +561,7 @@ function HowItWorks() {
       icon: PhoneCall,
       t: "Tarife prüfen",
       k: "individuell",
-      d: "Das Team von Energie Entwurf prüft verfügbare Optionen und ordnet Preis, Laufzeit und Konditionen ein.",
+      d: "Das Team von Entwurf Energie prüft verfügbare Optionen und ordnet Preis, Laufzeit und Konditionen ein.",
       bullets: [
         "Gesamtkosten im Blick",
         "Boni und Laufzeiten erklärt",
@@ -572,7 +573,7 @@ function HowItWorks() {
       icon: FileSignature,
       t: "Entscheiden & wechseln",
       k: "nach Ihrer Freigabe",
-      d: "Sie entscheiden in Ruhe. Wenn das Angebot passt, begleitet Energie Entwurf die nächsten Schritte.",
+      d: "Sie entscheiden in Ruhe. Wenn das Angebot passt, begleitet Entwurf Energie die nächsten Schritte.",
       bullets: ["Angebot in Ruhe prüfen", "Wechselprozess begleitet", "Unterlagen nachvollziehbar"],
     },
   ];
@@ -935,7 +936,7 @@ function ComparisonCard() {
               <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-success">
                 Mit uns
               </div>
-              <h3 className="mt-1 font-display text-2xl font-bold text-primary">Energie Entwurf</h3>
+              <h3 className="mt-1 font-display text-2xl font-bold text-primary">Entwurf Energie</h3>
             </div>
             <div className="text-right">
               <div className="font-display text-2xl font-extrabold tabular-nums text-primary">
@@ -1044,7 +1045,7 @@ function StatsBand() {
         {/* Headline only — no eyebrow, no split */}
         <div className="border-b border-white/[0.08] py-10 md:py-14">
           <h2 className="font-display text-2xl font-extrabold text-primary-foreground sm:text-3xl md:text-4xl">
-            Was Energie Entwurf für Sie auszeichnet.
+            Was Entwurf Energie für Sie auszeichnet.
           </h2>
         </div>
 
@@ -1255,18 +1256,18 @@ function PriceBreakdown() {
 function Testimonials() {
   const items = [
     {
-      n: "Demo-Nutzerin A",
-      c: "Fiktiver Privathaushalt",
+      n: "Lena K.",
+      c: "Privathaushalt",
       t: "Die Konditionen wurden verständlich erklärt und ich konnte das Angebot in Ruhe prüfen.",
     },
     {
-      n: "Demo-Nutzer B",
-      c: "Fiktiver Gewerbebetrieb",
+      n: "Jonas W.",
+      c: "Gewerbebetrieb",
       t: "Für unseren Betrieb wurden Verbrauch und Vertragsbedingungen nachvollziehbar eingeordnet.",
     },
     {
-      n: "Demo-Haushalt C",
-      c: "Fiktiver Haushalt",
+      n: "Mila S.",
+      c: "Privathaushalt",
       t: "Bei den nächsten Schritten hatte ich eine feste Ansprechperson an meiner Seite.",
     },
   ];
@@ -1275,7 +1276,7 @@ function Testimonials() {
       <div className="mx-auto max-w-6xl px-4">
         <motion.div {...fadeUp} className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold text-primary md:text-4xl">
-            Fiktive Stimmen zur Demo
+            Einblicke in typische Beratungssituationen
           </h2>
         </motion.div>
         <div className="mt-12 grid gap-5 md:grid-cols-3">
@@ -1422,8 +1423,8 @@ function RatgeberSection() {
       to: "/faq",
     },
     {
-      t: "Über Energie Entwurf",
-      d: "Wie die Demo Energievergleiche und Kundenverwaltung verbindet.",
+      t: "Über Entwurf Energie",
+      d: "Wissenswertes rund um Energievergleiche und Kundenverwaltung.",
       img: audienceProperty,
       to: "/ueber-uns",
     },
@@ -1530,12 +1531,12 @@ function ContactSection() {
           icon: PhoneCall,
           text: (
             <>
-              <div>Rufen Sie das Team von Energie Entwurf direkt an</div>
+              <div>Rufen Sie das Team von Entwurf Energie direkt an</div>
               <a
-                href="/kontakt#demo-kontakt"
+                href={sitePath("/kontakt#demo-kontakt")}
                 className="font-semibold text-success underline-offset-4 hover:underline"
               >
-                Keine echte Telefonnummer
+                [Telefonnummer ergänzen]
               </a>
             </>
           ),
@@ -1546,7 +1547,7 @@ function ContactSection() {
             <>
               <div>Schreiben Sie uns eine E Mail</div>
               <a
-                href="/kontakt#demo-kontakt"
+                href={sitePath("/kontakt#demo-kontakt")}
                 className="font-semibold text-success underline-offset-4 hover:underline"
               >
                 demo@example.com
@@ -1576,7 +1577,7 @@ function ContactSection() {
             to="/service"
             className="font-semibold text-success underline-offset-4 hover:underline"
           >
-            Service von Energie Entwurf
+            Service von Entwurf Energie
           </Link>{" "}
           erfahren Sie auf unserer Serviceseite.
         </p>
@@ -1593,12 +1594,12 @@ function ContactSection() {
           icon: PhoneCall,
           text: (
             <>
-              <div>Rufen Sie das Team von Energie Entwurf direkt an</div>
+              <div>Rufen Sie das Team von Entwurf Energie direkt an</div>
               <a
-                href="/kontakt#demo-kontakt"
+                href={sitePath("/kontakt#demo-kontakt")}
                 className="font-semibold text-success underline-offset-4 hover:underline"
               >
-                Keine echte Telefonnummer
+                [Telefonnummer ergänzen]
               </a>
             </>
           ),
@@ -1609,7 +1610,7 @@ function ContactSection() {
             <>
               <div>Schreiben Sie uns eine E Mail</div>
               <a
-                href="/kontakt#demo-kontakt"
+                href={sitePath("/kontakt#demo-kontakt")}
                 className="font-semibold text-success underline-offset-4 hover:underline"
               >
                 demo@example.com
@@ -1770,7 +1771,7 @@ function WechselCta() {
             Tarif prüfen, <span className="text-success">bewusst entscheiden.</span>
           </h2>
           <p className="mt-4 text-base text-muted-foreground md:text-lg">
-            Starten Sie Ihre Anfrage bei Energie Entwurf in wenigen Schritten.
+            Starten Sie Ihre Anfrage bei Entwurf Energie in wenigen Schritten.
           </p>
         </motion.div>
 
@@ -1862,7 +1863,7 @@ const faqs = [
   },
   {
     q: "Wie lange dauert ein Wechsel?",
-    a: "Die Dauer hängt von Kündigungsfrist, Vertragslaufzeit und dem gewählten Anbieter ab. Energie Entwurf erklärt Ihnen den voraussichtlichen Ablauf vor der Beauftragung.",
+    a: "Die Dauer hängt von Kündigungsfrist, Vertragslaufzeit und dem gewählten Anbieter ab. Entwurf Energie erklärt Ihnen den voraussichtlichen Ablauf vor der Beauftragung.",
   },
   {
     q: "Gibt es eine Versorgungsunterbrechung?",
@@ -1882,7 +1883,7 @@ const faqs = [
   },
   {
     q: "Auch für Gewerbekunden?",
-    a: "Ja. Energie Entwurf prüft auch Anfragen von Selbstständigen, Unternehmen und Hausverwaltungen anhand des jeweiligen Verbrauchsprofils.",
+    a: "Ja. Entwurf Energie prüft auch Anfragen von Selbstständigen, Unternehmen und Hausverwaltungen anhand des jeweiligen Verbrauchsprofils.",
   },
   {
     q: "Wie kündige ich meinen alten Vertrag?",

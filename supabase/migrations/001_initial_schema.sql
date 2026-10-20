@@ -1,5 +1,5 @@
 -- ============================================================
--- 001_initial_schema.sql: Energie Entwurf CRM
+-- 001_initial_schema.sql: Entwurf Energie CRM
 -- Ausführen in: Supabase SQL Editor (einmalig)
 -- ============================================================
 

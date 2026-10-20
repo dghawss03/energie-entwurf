@@ -22,13 +22,13 @@ import {
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ: Antworten zum Tarifwechsel | Energie Entwurf" },
+      { title: "FAQ: Antworten zum Tarifwechsel | Entwurf Energie" },
       {
         name: "description",
         content:
           "Häufige Fragen zu Strom- und Gasvergleich, Beratung, Datenschutz und Wechselablauf. Klar und ehrlich beantwortet.",
       },
-      { property: "og:title", content: "FAQ | Energie Entwurf" },
+      { property: "og:title", content: "FAQ | Entwurf Energie" },
       {
         property: "og:description",
         content:
@@ -53,15 +53,15 @@ const categories: { icon: typeof Zap; title: string; faqs: { q: string; a: strin
     faqs: [
       {
         q: "Ist die Beratung wirklich kostenlos?",
-        a: "Die erste Tarifprüfung und unsere Vermittlungsunterstützung sind für Sie grundsätzlich kostenlos, sofern nicht vorab ausdrücklich etwas anderes vereinbart wird. Energie Entwurf kann für eine erfolgreiche Vermittlung eine Vergütung vom Produktanbieter oder Vertriebspartner erhalten.",
+        a: "Die erste Tarifprüfung und unsere Vermittlungsunterstützung sind für Sie grundsätzlich kostenlos, sofern nicht vorab ausdrücklich etwas anderes vereinbart wird. Entwurf Energie kann für eine erfolgreiche Vermittlung eine Vergütung vom Produktanbieter oder Vertriebspartner erhalten.",
       },
       {
         q: "Gibt es versteckte Gebühren?",
         a: "Nein. Weder eine Wechselgebühr noch eine Servicepauschale. Was Sie zahlen, ist ausschließlich der Tarifpreis des neuen Anbieters.",
       },
       {
-        q: "Ist Energie Entwurf ein echter Vermittler?",
-        a: "Nein. Energie Entwurf ist ein Demo-Projekt von dghWeb. Es gibt keine echte Vermittlung, Provision oder Vertragsanfrage.",
+        q: "Ist Entwurf Energie ein echter Vermittler?",
+        a: "Die Tarifprüfung ist kostenlos und unverbindlich.",
       },
     ],
   },
@@ -119,7 +119,7 @@ const categories: { icon: typeof Zap; title: string; faqs: { q: string; a: strin
       },
       {
         q: "Kann ich meine Daten löschen lassen?",
-        a: "Die Demo speichert Ihre erfundenen Angaben nur in diesem Browser. Nutzen Sie im Mitarbeiterbereich die Funktion ‚Demo zurücksetzen‘ oder löschen Sie die Website-Daten in den Browsereinstellungen. demo@example.com ist eine fiktive Adresse und keine erreichbare Kontaktstelle.",
+        a: "Ihre Angaben werden in dieser Testumgebung nur in Ihrem Browser gespeichert. Nutzen Sie im Mitarbeiterbereich die Funktion ‚Testumgebung zurücksetzen‘ oder löschen Sie die Website-Daten in den Browsereinstellungen. Die Kontaktadressen dieses Entwurfs sind keine erreichbaren Kontaktstellen.",
       },
     ],
   },
@@ -128,7 +128,7 @@ const categories: { icon: typeof Zap; title: string; faqs: { q: string; a: strin
     title: "Tarife & Anbieter",
     faqs: [
       {
-        q: "Welche Anbieter prüft Energie Entwurf?",
+        q: "Welche Anbieter prüft Entwurf Energie?",
         a: "Die Auswahl kann sich auf Anbieter und Tarife beschränken, mit denen wir zusammenarbeiten oder für die verwertbare Angebotsdaten vorliegen. Ein vollständiger Marktvergleich aller Anbieter wird nicht versprochen.",
       },
       {
@@ -168,7 +168,7 @@ function FaqPage() {
             transition={{ ...fadeUp.transition, delay: 0.1 }}
             className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            Antworten zu Tarifprüfung, Vermittlung, Unterlagen und Datenschutz bei Energie Entwurf.
+            Antworten zu Tarifprüfung, Vermittlung, Unterlagen und Datenschutz bei Entwurf Energie.
           </motion.p>
         </div>
       </section>

@@ -19,13 +19,13 @@ import ctaBg from "@/assets/final-cta-bg.svg";
 export const Route = createFileRoute("/strom")({
   head: () => ({
     meta: [
-      { title: "Stromtarife persönlich prüfen | Energie Entwurf" },
+      { title: "Stromtarife persönlich prüfen | Entwurf Energie" },
       {
         name: "description",
         content:
-          "Energie Entwurf prüft Stromtarife für Haushalt, Ökostrom, E-Auto und Wärmepumpe persönlich und verständlich.",
+          "Entwurf Energie prüft Stromtarife für Haushalt, Ökostrom, E-Auto und Wärmepumpe persönlich und verständlich.",
       },
-      { property: "og:title", content: "Strom vergleichen | Energie Entwurf" },
+      { property: "og:title", content: "Strom vergleichen | Entwurf Energie" },
       {
         property: "og:description",
         content: "Stromtarife verständlich prüfen und den Wechsel auf Wunsch begleiten lassen.",
@@ -78,7 +78,7 @@ function StromPage() {
       <TopicHero
         kicker="Strom vergleichen"
         title={<>Strom, der zu Ihrem Leben passt.</>}
-        lead="Ob Haushalt, Ökostrom, E-Auto oder Wärmepumpe: Energie Entwurf ordnet passende Tarifoptionen für Ihren Verbrauch verständlich ein."
+        lead="Ob Haushalt, Ökostrom, E-Auto oder Wärmepumpe: Entwurf Energie ordnet passende Tarifoptionen für Ihren Verbrauch verständlich ein."
         image={heroImg}
         imageAlt="Illustration eines Wohnhauses mit Windenergie"
         Icon={Zap}
@@ -86,7 +86,7 @@ function StromPage() {
       />
 
       <FeatureGrid
-        title="Warum mit Energie Entwurf wechseln?"
+        title="Warum mit Entwurf Energie wechseln?"
         intro="Sechs Punkte, auf die wir bei Ihrer persönlichen Tarifprüfung achten."
         items={features}
       />
@@ -121,7 +121,7 @@ function StromPage() {
 
       <FinalCta
         title="Passt Ihr aktueller Stromtarif noch?"
-        body="Starten Sie die kostenlose Anfrage. Energie Entwurf prüft Ihre Angaben und meldet sich mit einer persönlichen Einschätzung."
+        body="Starten Sie die kostenlose Anfrage. Entwurf Energie prüft Ihre Angaben und meldet sich mit einer persönlichen Einschätzung."
         image={ctaBg}
       />
     </SiteLayout>

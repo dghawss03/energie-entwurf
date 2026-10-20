@@ -17,7 +17,7 @@ export const Route = createFileRoute("/danke")({
   validateSearch: (s) => search.parse(s) ?? {},
   head: () => ({
     meta: [
-      { title: "Anfrage eingegangen | Energie Entwurf" },
+      { title: "Anfrage eingegangen | Entwurf Energie" },
       { name: "description", content: "Vielen Dank für Ihre Anfrage." },
       { name: "robots", content: "noindex" },
     ],
@@ -39,11 +39,11 @@ function ThanksPage() {
           <CheckCircle2 className="h-8 w-8" />
         </div>
         <h1 className="mt-6 text-3xl font-bold text-primary md:text-4xl">
-          Vielen Dank. Ihre Anfrage ist eingegangen.
+          Vielen Dank! Ihre Anfrage wurde erfolgreich gespeichert.
         </h1>
         <p className="mt-4 text-muted-foreground">
-          Ihre Beispielanfrage wurde ausschließlich lokal in diesem Browser gespeichert. Sie kann im
-          Mitarbeiterbereich bearbeitet werden.
+          Sie können den Vorgang über Ihre Vorgangsnummer im Mitarbeiterbereich aufrufen und
+          bearbeiten.
         </p>
 
         <div className="mt-8 inline-block rounded-xl border bg-muted/50 px-6 py-4 text-center">
@@ -56,7 +56,8 @@ function ThanksPage() {
         </div>
 
         <div className="mx-auto mt-6 max-w-xl rounded-xl border border-success/20 bg-success/5 px-4 py-3 text-sm leading-relaxed text-muted-foreground sm:px-5">
-          Demo: Es wird keine E-Mail versendet und kein Anbieter kontaktiert.
+          Ihre Anfrage wurde ausschließlich in dieser Testumgebung in Ihrem Browser gespeichert. Es
+          erfolgt keine externe Übermittlung oder Bearbeitung; es werden keine E-Mails versendet.
         </div>
 
         {rechnung === "nachreichen" && (
@@ -64,7 +65,7 @@ function ThanksPage() {
             <FileWarning className="mt-0.5 h-5 w-5 flex-none" />
             <p>
               Ihre Anfrage wurde lokal gespeichert. Mindestens eine Datei konnte nicht im Browser
-              gespeichert werden. Bitte ergänzen Sie Beispieldokumente im CRM.
+              gespeichert werden. Bitte ergänzen Sie die Dokumente im CRM.
             </p>
           </div>
         )}

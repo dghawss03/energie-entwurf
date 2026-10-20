@@ -539,7 +539,10 @@ function LeadDetail() {
     onSuccess: () => {
       void queryClient.invalidateQueries();
       void router.invalidate();
-      toast.success("Demoaktion lokal gespeichert – keine externe Übertragung");
+      toast.success("Änderung gespeichert.", {
+        description:
+          "Testumgebung: Es erfolgt kein externer Versand und keine Übertragung an Anbieter.",
+      });
     },
     onError: (error) => toast.error(error.message),
   });
@@ -837,8 +840,7 @@ function LeadDetail() {
                             <span className="font-medium text-foreground">
                               {(teamQuery.data ?? []).find(
                                 (member) => member.auth_user_id === n.created_by,
-                              )?.full_name ??
-                                (authUser?.id === n.created_by ? user.name : "Demo-Team")}
+                              )?.full_name ?? (authUser?.id === n.created_by ? user.name : "Team")}
                             </span>
                             {isImportant && (
                               <Badge className="border-0 bg-rose-500/15 text-[10px] text-rose-700 dark:text-rose-300">
@@ -1248,7 +1250,7 @@ function LeadDetail() {
                 disabled={!lead.phone}
               >
                 <Phone className="mr-2 h-4 w-4" />
-                Demokontakt
+                Kontakt
               </Button>
               <Button
                 variant="outline"

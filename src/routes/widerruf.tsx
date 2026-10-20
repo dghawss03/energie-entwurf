@@ -1,56 +1,39 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { StaticPage } from "@/components/site/StaticPage";
-
 export const Route = createFileRoute("/widerruf")({
   head: () => ({
     meta: [
-      { title: "Widerruf – Demo-Hinweis | Energie Entwurf" },
+      { title: "Widerruf | Entwurf Energie" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
   component: () => (
     <StaticPage
-      title="Widerruf – Demo-Hinweis"
-      lead="Rechtlicher Platzhalter. Keine unverändert übernommene Belehrung eines tatsächlichen Anbieters."
+      title="Widerruf"
+      lead="Prüfentwurf – eine erforderliche Widerrufsbelehrung wird anhand des tatsächlichen Vertragsmodells ergänzt."
     >
-      <p className="text-xs leading-relaxed text-muted-foreground">
-        Diese Seite ist Bestandteil einer Demonstrationswebsite. Die Angaben sind beispielhaft und
-        werden bei einer tatsächlichen Umsetzung individuell ergänzt.
-      </p>
-      <h2>Keine echte Vertragsabwicklung</h2>
+      <h2>Vorbereitete Unternehmensangaben</h2>
+      <ul>
+        <li>Unternehmen: Entwurf Energie</li>
+        <li>Empfänger und Anschrift: [Firmenanschrift ergänzen]</li>
+        <li>Kontakt: [Kontaktdaten ergänzen]</li>
+        <li>Fristen und Verfahren: [Nach rechtlicher Prüfung des Vertragsmodells ergänzen]</li>
+      </ul>
+      <h2>Hinweis zur Testversion</h2>
       <p>
-        In Energie Entwurf werden weder Energielieferverträge abgeschlossen noch echte
-        Vermittlungsaufträge erteilt. Das Absenden des Demoformulars erzeugt lediglich einen lokalen
-        Beispieldatensatz.
+        In dieser Testversion werden keine Energie- oder Vermittlungsverträge geschlossen. Die
+        Musterfelder oben sind keine tatsächliche Widerrufsadresse. Den Website-Betreiber dghWeb und
+        die noch auszufüllenden Betreiberangaben benennt das <Link to="/impressum">Impressum</Link>.
       </p>
+      <h2>Gespeicherte Eingaben entfernen</h2>
       <p>
-        Das fiktive Unternehmen Energie Entwurf ist keine tatsächliche Vertragspartnerin. Den realen
-        Website-Betreiber und seine Kontaktmöglichkeiten benennt das noch zu vervollständigende{" "}
-        <Link to="/impressum">Impressum</Link>. Diese Seite enthält keine Widerrufsbelehrung für
-        einen Energieliefervertrag.
+        Mit „Testumgebung zurücksetzen“ im Mitarbeiterbereich können Sie gespeicherte Vorgänge und
+        Dokumente entfernen. Die vollständigen Löschmöglichkeiten erläutert der{" "}
+        <Link to="/datenschutz">Datenschutz</Link>. Das Zurücksetzen ist kein Widerruf eines
+        Vertrags.
       </p>
-      <h2>Lokale Eingaben entfernen</h2>
-      <p>
-        Die Funktion „Demo zurücksetzen“ auf der Anmeldeseite und unter Einstellungen entfernt die
-        lokalen Demodaten und Dokumente. Diese technische Funktion ist kein Widerrufsverfahren für
-        einen echten Vertrag.
-      </p>
-      <h2>Platzhalter der fiktiven Kundenumsetzung</h2>
-      <p>
-        [Angaben zum konkreten Vertragsmodell und gegebenenfalls Kontaktdaten ergänzen.] Dies ist
-        ausschließlich ein Beispiel für eine individuell umzusetzende Kundenwebsite. Für diese Demo
-        wird kein tatsächlicher Widerrufsempfänger des fiktiven Unternehmens angegeben.
-      </p>
-      <h2>Vor Veröffentlichung zu prüfen</h2>
-      <p>
-        Falls später tatsächliche Leistungen oder Verträge angeboten werden, müssen die dafür
-        erforderlichen Informationen und Verfahren gesondert rechtlich geprüft werden. Dieser
-        Platzhalter ist keine abschließend geprüfte Widerrufsbelehrung und enthält keine echte
-        Empfängeradresse.
-      </p>
-      <p>Demo-Projekt von dghWeb – nicht für echte Vertragsanfragen.</p>
       <p className="text-xs text-muted-foreground">
-        Demo-Prüfentwurf · Stand: 20. Oktober 2026 · Vor Veröffentlichung prüfen.
+        Platzhalter für die individuelle Belehrung · Vor Veröffentlichung prüfen.
       </p>
     </StaticPage>
   ),

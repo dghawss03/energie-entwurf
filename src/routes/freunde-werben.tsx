@@ -18,20 +18,20 @@ import { requestReferralCode } from "@/lib/api-client";
 export const Route = createFileRoute("/freunde-werben")({
   head: () => ({
     meta: [
-      { title: "Energie Entwurf empfehlen & 30 € sichern" },
+      { title: "Entwurf Energie empfehlen & 30 € sichern" },
       {
         name: "description",
         content:
-          "Empfehlen Sie Energie Entwurf weiter und erhalten Sie nach einem erfolgreichen Energiewechsel einen Demo-Gutschein im Wert von 30 €.",
+          "Empfehlen Sie Entwurf Energie weiter und erhalten Sie nach einem erfolgreichen Energiewechsel einen Gutschein im Wert von 30 €.",
       },
       {
         property: "og:title",
-        content: "Energie Entwurf weiterempfehlen",
+        content: "Entwurf Energie weiterempfehlen",
       },
       {
         property: "og:description",
         content:
-          "Persönlichen Empfehlungslink teilen und nach einem erfolgreichen Wechsel 30 € als Demo-Gutschein erhalten.",
+          "Persönlichen Empfehlungslink teilen und nach einem erfolgreichen Wechsel 30 € als Gutschein erhalten.",
       },
     ],
   }),
@@ -53,9 +53,8 @@ const steps = [
   },
   {
     icon: Gift,
-    title: "30 € Demo-Prämie",
-    description:
-      "Der Beispielablauf zeigt eine fiktive Prämie von 30 €. Es wird nichts ausgezahlt oder versendet.",
+    title: "30 € Empfehlungsprämie",
+    description: "Verfolgen Sie Ihre Empfehlungen und den aktuellen Prämienstatus.",
   },
 ];
 
@@ -63,7 +62,7 @@ const conditions = [
   {
     title: "Nur Neukunden zählen",
     content:
-      "Die empfohlene Person darf noch keine laufende Anfrage bei Energie Entwurf haben. Nur Neukunden qualifizieren sich für die Prämie.",
+      "Die empfohlene Person darf noch keine laufende Anfrage bei Entwurf Energie haben. Nur Neukunden qualifizieren sich für die Prämie.",
   },
   {
     title: "Keine Eigenempfehlung",
@@ -83,12 +82,12 @@ const conditions = [
   {
     title: "30 Tage Wartezeit",
     content:
-      "Die Simulation zeigt eine Wartezeit von 30 Tagen. Ein echter Wechsel oder Gutscheinversand findet nicht statt.",
+      "Die Freigabe einer Prämie ist im Ablauf nach einer Wartezeit von 30 Tagen vorgesehen.",
   },
   {
-    title: "Prämie: 30-€-Demo-Gutschein",
+    title: "Prämie: 30-€-Gutschein",
     content:
-      "Demo-Gutscheine sind ausschließlich fiktive Beispiele. Es gibt keine Auszahlung, keinen Versand und keinen Anspruch auf eine echte Prämie.",
+      "Testumgebung: Prämien werden nur als Status dargestellt. Es erfolgt keine Auszahlung oder Zustellung.",
   },
 ];
 
@@ -104,9 +103,12 @@ function FreundeWerbenPage() {
     try {
       await requestReferralCode(email.trim());
       setSubmitted(true);
-      toast.success("Demo-Code: DEMO2026. Kein Versand und keine echte Prämie.", {
-        duration: 6000,
-      });
+      toast.success(
+        "Empfehlungscode gespeichert. Testumgebung: keine Nachricht und keine Auszahlung.",
+        {
+          duration: 6000,
+        },
+      );
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Lokale Anfrage fehlgeschlagen");
     } finally {
@@ -126,15 +128,15 @@ function FreundeWerbenPage() {
           >
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-success/30 bg-success/10 px-4 py-1.5 text-sm font-semibold text-success">
               <Gift className="h-4 w-4" />
-              30 € Demo-Gutschein pro Empfehlung
+              30 € Gutschein pro Empfehlung
             </div>
             <h1 className="font-display text-4xl font-extrabold leading-tight text-primary-foreground md:text-5xl">
-              Energie Entwurf empfehlen &ndash; 30 &euro; sichern
+              Entwurf Energie empfehlen &ndash; 30 &euro; sichern
             </h1>
             <p className="mt-5 text-lg text-primary-foreground/80">
               Teilen Sie Ihren persönlichen Link. Für jeden qualifizierten und abgeschlossenen
               Energiewechsel erhalten Sie einen{" "}
-              <strong className="text-primary-foreground">30-€-Demo-Gutschein</strong>.
+              <strong className="text-primary-foreground">30-€-Gutschein</strong>.
             </p>
           </motion.div>
         </div>
@@ -239,13 +241,15 @@ function FreundeWerbenPage() {
                 Ihren Empfehlungslink anfordern
               </h2>
               <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
-                Sie haben bereits über Energie Entwurf gewechselt? Geben Sie Ihre E-Mail-Adresse
+                Sie haben bereits über Entwurf Energie gewechselt? Geben Sie Ihre E-Mail-Adresse
                 ein, damit wir Ihren persönlichen Link zuordnen können.
               </p>
 
               {submitted ? (
                 <div className="rounded-xl border border-success/20 bg-success/10 p-5 text-center">
-                  <p className="text-sm font-semibold text-success">Demo-Code: DEMO2026</p>
+                  <p className="text-sm font-semibold text-success">
+                    Ihr Empfehlungscode: DEMO2026
+                  </p>
                   <p className="mt-1 text-sm text-muted-foreground">
                     Es wird keine E-Mail versendet und keine echte Prämie ausgezahlt.
                   </p>
@@ -268,14 +272,14 @@ function FreundeWerbenPage() {
                     {loading ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Wird lokal simuliert…
+                        Wird gespeichert…
                       </>
                     ) : (
                       "Link anfordern"
                     )}
                   </Button>
                   <p className="text-center text-xs text-muted-foreground">
-                    Nur für Kunden mit abgeschlossenem Energiewechsel bei Energie Entwurf.
+                    Nur für Kunden mit abgeschlossenem Energiewechsel bei Entwurf Energie.
                   </p>
                 </form>
               )}

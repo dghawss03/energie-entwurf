@@ -17,7 +17,7 @@ export const Route = createFileRoute("/mitarbeiter")({
   },
   head: () => ({
     meta: [
-      { title: "Mitarbeiterbereich – Energie Entwurf" },
+      { title: "Mitarbeiterbereich – Entwurf Energie" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),

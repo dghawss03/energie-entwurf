@@ -1,4 +1,4 @@
-import { siteUrl } from "@/lib/site-url";
+import { sitePath, siteUrl } from "@/lib/site-url";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
@@ -24,13 +24,13 @@ import ctaBg from "@/assets/final-cta-bg.svg";
 export const Route = createFileRoute("/service")({
   head: () => ({
     meta: [
-      { title: "Service: Persönliche Hilfe rund um Energie | Energie Entwurf" },
+      { title: "Service: Persönliche Hilfe rund um Energie | Entwurf Energie" },
       {
         name: "description",
         content:
-          "Kontakt, Wechselbegleitung, Dokumente und Antworten: der persönliche Service von Energie Entwurf für Ihre Tariffragen.",
+          "Kontakt, Wechselbegleitung, Dokumente und Antworten: der persönliche Service von Entwurf Energie für Ihre Tariffragen.",
       },
-      { property: "og:title", content: "Service | Energie Entwurf" },
+      { property: "og:title", content: "Service | Entwurf Energie" },
       {
         property: "og:description",
         content: "Persönliche Hilfe rund um Tarifprüfung, Unterlagen und Anbieterwechsel.",
@@ -57,7 +57,7 @@ const services = [
     title: "Persönliche Beratung",
     desc: "Besprechen Sie Fragen zu Strom, Gas und Ihrer Anfrage direkt mit unserem Team.",
     to: "/kontakt",
-    cta: "Demokontakt",
+    cta: "Kontakt",
   },
   {
     icon: HelpCircle,
@@ -83,7 +83,7 @@ const services = [
   {
     icon: Gift,
     title: "Freunde werben",
-    desc: "Empfehlen Sie uns weiter und sichern Sie sich 30 € Demo-Gutschein pro erfolgreichem Wechsel.",
+    desc: "Empfehlen Sie uns weiter und sichern Sie sich 30 € Gutschein pro erfolgreichem Wechsel.",
     to: "/freunde-werben",
     cta: "Mehr erfahren",
   },
@@ -119,7 +119,7 @@ function ServicePage() {
     <SiteLayout>
       <TopicHero
         kicker="Wir sind für Sie da"
-        title={<>Energie Entwurf bleibt ansprechbar.</>}
+        title={<>Entwurf Energie bleibt ansprechbar.</>}
         lead="Von der ersten Tariffrage bis zu den nächsten Schritten: Unser Team erklärt, ordnet ein und unterstützt persönlich."
         image={heroImg}
         imageAlt="Illustration eines digitalen Dokuments mit Verbrauchsdiagramm"
@@ -176,7 +176,7 @@ function ServicePage() {
               </h2>
               <p className="mt-5 text-muted-foreground">
                 Laufzeiten, erforderliche Daten und Vertragsunterlagen müssen zusammenpassen.
-                Energie Entwurf erklärt den Ablauf und unterstützt dort, wo Sie uns beauftragen.
+                Entwurf Energie erklärt den Ablauf und unterstützt dort, wo Sie uns beauftragen.
               </p>
               <ul className="mt-6 space-y-3">
                 {[
@@ -255,7 +255,7 @@ function ServicePage() {
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="/kontakt#demo-kontakt"
+                href={sitePath("/kontakt#demo-kontakt")}
                 className="inline-flex max-w-full items-center gap-2 break-words text-sm font-bold text-success hover:underline"
               >
                 <Mail className="h-4 w-4 shrink-0" /> Dokument per E-Mail anfragen
@@ -315,10 +315,10 @@ function ServicePage() {
               to="/kontakt"
               className="inline-flex max-w-full items-center justify-center gap-2 whitespace-normal rounded-full bg-success px-6 py-3 text-center text-sm font-bold text-success-foreground transition hover:bg-success/90"
             >
-              <Phone className="h-4 w-4" /> Demokontakt
+              <Phone className="h-4 w-4" /> Kontakt
             </Link>
             <a
-              href="/kontakt#demo-kontakt"
+              href={sitePath("/kontakt#demo-kontakt")}
               className="inline-flex max-w-full items-center justify-center gap-2 whitespace-normal rounded-full border border-white/30 bg-transparent px-6 py-3 text-center text-sm font-bold text-primary-foreground transition hover:bg-white/10"
             >
               E-Mail schreiben <ArrowRight className="h-4 w-4" />

@@ -8,7 +8,7 @@ import { getArticleBySlug, getPublishedArticles, ApiError } from "@/lib/api-clie
 export const Route = createFileRoute("/wissen/$slug")({
   head: () => ({
     meta: [
-      { title: "Energiewissen und Ratgeber | Energie Entwurf" },
+      { title: "Energiewissen und Ratgeber | Entwurf Energie" },
       {
         name: "description",
         content:
@@ -156,7 +156,7 @@ function ArticlePage() {
             Tarif persönlich prüfen lassen
           </h2>
           <p className="mt-3 text-primary-foreground/80">
-            Energie Entwurf prüft Ihre Angaben kostenlos und ordnet passende Angebote verständlich
+            Entwurf Energie prüft Ihre Angaben kostenlos und ordnet passende Angebote verständlich
             für Sie ein.
           </p>
           <Button asChild className="mt-6 bg-success text-success-foreground hover:bg-success/90">

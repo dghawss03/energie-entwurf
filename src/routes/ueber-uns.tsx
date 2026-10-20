@@ -20,17 +20,16 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/ueber-uns")({
   head: () => ({
     meta: [
-      { title: "Über Energie Entwurf | Persönliche Tarifberatung" },
+      { title: "Über Entwurf Energie | Persönliche Tarifberatung" },
       {
         name: "description",
         content:
-          "Energie Entwurf unterstützt private Haushalte und Unternehmen dabei, Tarife für Strom und Gas verständlich zu prüfen und passende Entscheidungen zu treffen.",
+          "Entwurf Energie unterstützt private Haushalte und Unternehmen dabei, Tarife für Strom und Gas verständlich zu prüfen und passende Entscheidungen zu treffen.",
       },
-      { property: "og:title", content: "Über uns | Energie Entwurf" },
+      { property: "og:title", content: "Über uns | Entwurf Energie" },
       {
         property: "og:description",
-        content:
-          "Persönliche Tarifberatung aus Demostadt (fiktiv): verständlich, transparent und unverbindlich.",
+        content: "Persönliche Tarifberatung: verständlich, transparent und unverbindlich.",
       },
     ],
   }),
@@ -126,7 +125,7 @@ function UeberUnsPage() {
             {...fadeUp}
             className="inline-flex items-center gap-2 rounded-full border border-success/30 bg-success/10 px-4 py-1.5 text-xs font-medium text-success"
           >
-            <MapPin className="h-3.5 w-3.5" /> Energie Entwurf · Demo-Projekt von dghWeb
+            <MapPin className="h-3.5 w-3.5" /> Entwurf Energie · Persönlich für Sie da
           </motion.div>
           <motion.h1
             {...fadeUp}
@@ -141,9 +140,8 @@ function UeberUnsPage() {
             transition={{ ...fadeUp.transition, delay: 0.1 }}
             className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground md:text-xl"
           >
-            Energie Entwurf demonstriert Energievergleiche und digitale Kundenverwaltung. Ein
-            Projekt von dghWeb mit fiktiven Beispieldaten: klare Informationen, passende Optionen
-            und eine Entscheidung, die zu Ihnen passt.
+            Entwurf Energie verbindet klare Informationen, passende Optionen und eine Entscheidung,
+            die zu Ihnen passt.
           </motion.p>
         </div>
       </section>
@@ -216,7 +214,7 @@ function UeberUnsPage() {
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold text-primary md:text-4xl">Was uns leitet</h2>
             <p className="mt-4 text-muted-foreground">
-              Vier Gestaltungsprinzipien für diese digitale Demo.
+              Vier Prinzipien für eine verlässliche Zusammenarbeit.
             </p>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -248,7 +246,7 @@ function UeberUnsPage() {
             Menschen, die Energie verstehen
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Fiktive Rollen für Beratung, Service und Qualität zeigen, wie eine Anfrage verständlich,
+            Beratung, Service und Qualität greifen ineinander, damit Ihre Anfrage verständlich,
             sorgfältig und persönlich bearbeitet wird.
           </p>
         </div>
@@ -282,7 +280,7 @@ function UeberUnsPage() {
               <Award className="h-3.5 w-3.5" /> Unser Weg
             </div>
             <h2 className="mt-4 text-3xl font-bold text-primary md:text-4xl">
-              So arbeitet Energie Entwurf
+              So arbeitet Entwurf Energie
             </h2>
           </div>
           <ol className="relative mt-14 space-y-8 border-l-2 border-success/20 pl-8">
@@ -312,7 +310,7 @@ function UeberUnsPage() {
             <div className="max-w-xl">
               <Handshake className="h-10 w-10 text-success" />
               <h2 className="mt-4 text-3xl font-bold md:text-4xl">
-                Lernen Sie Energie Entwurf kennen.
+                Lernen Sie Entwurf Energie kennen.
               </h2>
               <p className="mt-3 text-primary-foreground/80">
                 Stellen Sie Ihre Fragen und erhalten Sie eine klare erste Einschätzung.

@@ -19,13 +19,13 @@ import ctaBg from "@/assets/final-cta-bg.svg";
 export const Route = createFileRoute("/gewerbestrom")({
   head: () => ({
     meta: [
-      { title: "Gewerbestrom persönlich prüfen | Energie Entwurf" },
+      { title: "Gewerbestrom persönlich prüfen | Entwurf Energie" },
       {
         name: "description",
         content:
-          "Energie Entwurf prüft Gewerbestrom für Unternehmen, Handwerk, Gastronomie und mehrere Standorte persönlich und nachvollziehbar.",
+          "Entwurf Energie prüft Gewerbestrom für Unternehmen, Handwerk, Gastronomie und mehrere Standorte persönlich und nachvollziehbar.",
       },
-      { property: "og:title", content: "Gewerbestrom vergleichen | Energie Entwurf" },
+      { property: "og:title", content: "Gewerbestrom vergleichen | Entwurf Energie" },
       {
         property: "og:description",
         content:
@@ -84,7 +84,7 @@ function GewerbestromPage() {
             <span className="text-success">Passend zum Verbrauchsprofil.</span>
           </>
         }
-        lead="Vom Handwerksbetrieb bis zum Filialnetz: Energie Entwurf erfasst Ihren Bedarf und ordnet verfügbare Gewerbestromangebote verständlich ein."
+        lead="Vom Handwerksbetrieb bis zum Filialnetz: Entwurf Energie erfasst Ihren Bedarf und ordnet verfügbare Gewerbestromangebote verständlich ein."
         image={heroImg}
         imageAlt="Illustration eines Wohnhauses mit Windenergie"
         Icon={Building2}
@@ -96,8 +96,8 @@ function GewerbestromPage() {
       />
 
       <FeatureGrid
-        title="Warum Gewerbestrom über Energie Entwurf?"
-        intro="Sechs Punkte, die Unternehmen bei der Tarifprüfung mit Energie Entwurf unterstützen."
+        title="Warum Gewerbestrom über Entwurf Energie?"
+        intro="Sechs Punkte, die Unternehmen bei der Tarifprüfung mit Entwurf Energie unterstützen."
         items={features}
       />
 
@@ -124,7 +124,7 @@ function GewerbestromPage() {
         imageAlt="Illustration eines Hauses mit Solarmodulen"
         bullets={[
           "1. Rechnung hochladen oder per E-Mail senden",
-          "2. Energie Entwurf ordnet verfügbare Optionen für Ihr Profil ein",
+          "2. Entwurf Energie ordnet verfügbare Optionen für Ihr Profil ein",
           "3. Sie entscheiden und beauftragen die gewünschten nächsten Schritte",
         ]}
       />
