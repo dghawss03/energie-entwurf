@@ -80,7 +80,7 @@ function ReferralsPage() {
   const payMutation = useMutation({
     mutationFn: (referral: BackendReferral) => markReferralPaid(referral.id, undefined),
     onSuccess: () => {
-      toast.success("Prämienstatus gespeichert. Testumgebung: keine Auszahlung.");
+      toast.success("Prämienstatus gespeichert. Es wurde keine Auszahlung ausgeführt.");
       void queryClient.invalidateQueries({ queryKey: ["referrals"] });
       setPayDialog(null);
     },
@@ -259,7 +259,7 @@ function ReferralsPage() {
             <DialogDescription>
               Soll der Prämienstatus für{" "}
               <strong>{payDialog?.referrer_name ?? "diesen Kunden"}</strong> auf bezahlt gesetzt
-              werden? In dieser Testumgebung wird nichts ausgezahlt oder versendet.
+              werden? Es wird nur der Status gespeichert. Es erfolgt keine Auszahlung und kein Versand.
             </DialogDescription>
           </DialogHeader>
           <div className="rounded-xl border border-border bg-surface p-4 text-sm text-muted-foreground">

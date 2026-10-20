@@ -1,4 +1,4 @@
-# Funktionsprüfung – Energie Entwurf
+# Funktionsprüfung – Entwurf Energie
 
 Stand: 20. Oktober 2026. Ausschließlich lokale Demo, keine Veröffentlichung.
 

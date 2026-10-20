@@ -192,7 +192,7 @@ function Hero() {
               </span>
             </h1>
             <p className="mt-4 max-w-xl text-base font-semibold leading-relaxed text-muted-foreground md:mt-5 md:text-lg">
-              Finden Sie passende Tarife für Strom und Gas – mit klaren Konditionen und persönlicher
+              Finden Sie passende Tarife für Strom und Gas mit klaren Konditionen und persönlicher
               Begleitung.
             </p>
 
@@ -1550,7 +1550,7 @@ function ContactSection() {
                 href={sitePath("/kontakt#demo-kontakt")}
                 className="font-semibold text-success underline-offset-4 hover:underline"
               >
-                demo@example.com
+                kontakt@example.com
               </a>
             </>
           ),
@@ -1613,7 +1613,7 @@ function ContactSection() {
                 href={sitePath("/kontakt#demo-kontakt")}
                 className="font-semibold text-success underline-offset-4 hover:underline"
               >
-                demo@example.com
+                kontakt@example.com
               </a>
             </>
           ),

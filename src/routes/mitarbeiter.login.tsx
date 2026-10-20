@@ -62,9 +62,9 @@ function LoginPage() {
           <h2 className="text-4xl font-semibold leading-tight">
             Leads bearbeiten.
             <br />
-            Verträge abschließen.
+            Angebote vergleichen.
             <br />
-            Kunden glücklich machen.
+            Kunden begleiten.
           </h2>
           <p className="mt-4 max-w-md text-primary-foreground/80">
             Alle Anfragen, Angebote und Aufgaben an einem Ort.
@@ -86,7 +86,7 @@ function LoginPage() {
           <div>
             <h1 className="text-2xl font-semibold tracking-tight">Willkommen zurück</h1>
             <p className="mt-1 text-sm text-muted-foreground">
-              Testzugang: admin@example.com, manager@example.com oder employee@example.com.
+              Verfügbare Zugänge: admin@example.com, manager@example.com oder employee@example.com.
               Passwort: Demo2026!
             </p>
           </div>
@@ -157,7 +157,7 @@ function LoginPage() {
             variant="outline"
             className="w-full"
             onClick={async () => {
-              if (!window.confirm("Alle gespeicherten Vorgänge und Dokumente dieser Testumgebung löschen?")) return;
+              if (!window.confirm("Alle lokal gespeicherten Vorgänge und Dokumente löschen?")) return;
               try {
                 await resetDemo();
                 setError(null);
@@ -166,7 +166,7 @@ function LoginPage() {
               }
             }}
           >
-            Testumgebung zurücksetzen
+            Lokale Daten zurücksetzen
           </Button>
           <p className="text-center text-xs text-muted-foreground">
             Probleme?{" "}

@@ -306,7 +306,7 @@ export function createDemoState(): DemoState {
         estimated_savings: 120,
         status: "sent",
         valid_until: null,
-        notes: "Testumgebung: kein verbindliches Vertragsangebot.",
+        notes: "Unverbindliche Tarifberechnung, kein Vertragsangebot.",
         ...stamp(),
       },
     ],
@@ -325,7 +325,7 @@ export function createDemoState(): DemoState {
         name: "Anfragebestätigung",
         subject: "Ihre Anfrage",
         trigger_name: "Lead erstellt",
-        body: "Diese Nachricht wird nur simuliert und nicht versendet.",
+        body: "Guten Tag {{first_name}}, vielen Dank für Ihre Anfrage zu Strom und Gas. Ihre Angaben bilden die Grundlage für die Tarifauswahl. Freundliche Grüße, Ihr Team von Entwurf Energie",
         is_active: true,
         ...stamp(),
       },
@@ -398,13 +398,13 @@ function readState(): DemoState {
   } catch {
     throw new DemoError(
       503,
-      "Demo-Speicher nicht verfügbar oder beschädigt. Bitte Demo zurücksetzen.",
+      "Lokaler Speicher nicht verfügbar oder beschädigt. Bitte lokale Daten zurücksetzen.",
     );
   }
 }
 function saveState(state: DemoState) {
   if (typeof window === "undefined")
-    throw new DemoError(409, "Demoänderungen benötigen einen Browser.");
+    throw new DemoError(409, "Lokale Änderungen benötigen einen Browser.");
   try {
     window.localStorage.setItem(DEMO_STORAGE_KEY, JSON.stringify(state));
   } catch {
@@ -434,7 +434,7 @@ export function demoSignIn(email: string, password: string) {
   const profile = state.profiles.find(
     (p) => p.email.toLowerCase() === email.trim().toLowerCase() && p.is_active,
   );
-  if (!profile || password !== DEMO_PASSWORD) throw new DemoError(401, "Demo-Zugang ungültig.");
+  if (!profile || password !== DEMO_PASSWORD) throw new DemoError(401, "E-Mail-Adresse oder Passwort ungültig.");
   saveState(state);
   window.localStorage.setItem(DEMO_SESSION_KEY, profile.authUserId);
   window.dispatchEvent(new Event(DEMO_CHANGED));
@@ -556,7 +556,7 @@ function communication(state: DemoState, leadId: string, subject: string, author
     direction: "internal",
     subject,
     content_summary: /simuliert|versand/i.test(subject)
-      ? "Testumgebung: Es wurde keine Nachricht versendet."
+      ? "Es wurde keine Nachricht versendet."
       : "Vorgang in der Kundenverwaltung gespeichert.",
     status: "success",
     external_id: null,
@@ -692,7 +692,7 @@ async function request(
     return data({ lead_id: leadId, lead_number: number, invoice_uploaded: false });
   }
   if (path === "/api/referral-validate")
-    return data({ valid: body.code === "DEMO2026", referrer_name: "Demo Haushalt 5" });
+    return data({ valid: body.code === "DEMO2026", referrer_name: "Haushalt Keller" });
   if (path === "/api/referral-request") {
     const email = z.string().email().parse(body.email);
     const lead = state.leads.find((l) => l.email === email);
@@ -800,7 +800,7 @@ async function request(
             status: "draft",
             valid_until: new Date(Date.now() + 14 * 86400000).toISOString(),
             notes:
-              "Tarifberechnung für den ersten Energieträger. Testumgebung: kein verbindliches Vertragsangebot.",
+              "Tarifberechnung für den ersten Energieträger. Unverbindliche Tarifberechnung, kein Vertragsangebot.",
             ...stamp(),
           };
           state.offers.unshift(offer);
@@ -1141,5 +1141,5 @@ async function request(
     saveState(state);
     return data(template);
   }
-  throw new DemoError(405, "Aktion in der lokalen Demo nicht verfügbar");
+  throw new DemoError(405, "Diese Aktion ist lokal nicht verfügbar");
 }

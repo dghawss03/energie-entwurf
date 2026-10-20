@@ -1,6 +1,6 @@
 export const BRAND_NAME = "Entwurf Energie";
 export const DEMO_PROJECT_NOTICE =
-  "Website-Entwurf von dghWeb – Diese Website befindet sich noch in der Entwicklung und ist nicht final.";
+  "Diese Website befindet sich derzeit noch im Entwurf. Aus Datenschutzgründen wurden ursprüngliche Unternehmensangaben und Kundendaten entfernt oder ersetzt.";
 
 /** Update presentation content saved by an earlier local demo, preserving record IDs and edits. */
 export function rebrandSavedContent<T>(value: T, articleImage: string): T {
@@ -12,6 +12,12 @@ export function rebrandSavedContent<T>(value: T, articleImage: string): T {
       );
     const savedLabels: Record<string, string> = {
       "Alex Beispiel": "Alex Keller",
+      "Demo Haushalt 5": "Haushalt Keller",
+      "Diese Nachricht wird nur simuliert und nicht versendet.":
+        "Guten Tag {{first_name}}, vielen Dank für Ihre Anfrage zu Strom und Gas. Ihre Angaben bilden die Grundlage für die Tarifauswahl. Freundliche Grüße, Ihr Team von Entwurf Energie",
+      "Testumgebung: kein verbindliches Vertragsangebot.":
+        "Unverbindliche Tarifberechnung, kein Vertragsangebot.",
+      "Testumgebung: Es wurde keine Nachricht versendet.": "Es wurde keine Nachricht versendet.",
       "Kim Muster": "Kim Wendt",
       "Robin Demo": "Robin Sommer",
       "Website-Demo": "Website",

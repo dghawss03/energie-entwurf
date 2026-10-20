@@ -80,7 +80,7 @@ Nach ausdrücklicher Freigabe sind bei GitHub folgende Einstellungen nötig:
 2. Unter **Settings → Pages → Build and deployment → Source** die Option **GitHub Actions** wählen. Kein `gh-pages`-Branch, kein `/docs`-Ordner und keine eigene Domain erforderlich.
 3. Unter **Settings → Actions → General** die im Workflow verwendeten offiziellen GitHub-Actions zulassen. Es werden keine eigenen Secrets, API-Schlüssel oder Personal Access Tokens benötigt. Der Deploymentjob verwendet den automatisch bereitgestellten GitHub-Token mit `pages: write` und `id-token: write`.
 4. Falls Regeln für das Environment `github-pages` bestehen, Deployments von `main` zulassen. Bei gewünschter manueller Freigabe die verfügbaren Environment-Schutzregeln verwenden.
-5. Erst nach Freigabe committen und auf das eigene Repository pushen. Unter **Actions → Build and deploy GitHub Pages** den Lauf verfolgen. Vorliegend wurden weder GitHub-Einstellungen geändert noch Commits, Pushes oder Deployments ausgeführt.
+5. Erst nach Freigabe committen und auf das eigene Repository pushen. Unter **Actions → Build and deploy GitHub Pages** den Lauf verfolgen. Ein Push auf `main` startet bei eingerichtetem Pages-Hosting die Veröffentlichung automatisch. Der Freigabestatus der aktuellen Überarbeitung steht in `docs/VEROEFFENTLICHUNGSPRUEFUNG.md`.
 
 Das entspricht dem [offiziellen GitHub-Pages-Workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages). Der [TanStack-SPA-Modus](https://tanstack.com/start/latest/docs/framework/react/guide/spa-mode) behält den vorhandenen Stack bei.
 
@@ -104,4 +104,4 @@ Demo-Projekt von dghWeb – nicht für echte Vertragsanfragen. Neue Assets lasse
 
 ## Kundenentwurf
 
-Die sichtbare Marke lautet Entwurf Energie; Repository- und Hostingpfad `/energie-entwurf/` sowie vorhandene Speicherschlüssel bleiben für bestehende Links und Vorgänge erhalten. Der obere Hinweis kennzeichnet die Website als Entwurf von dghWeb. Formularbestätigung und simulierte Versand-/Prämienaktionen benennen weiterhin, dass keine externe Übertragung, Bearbeitung oder Auszahlung stattfindet. Die rechtlichen Seiten bleiben vorbereitete Entwürfe mit getrennten Kunden- und Betreiberangaben.
+Die sichtbare Marke lautet Entwurf Energie; Repository- und Hostingpfad `/energie-entwurf/` sowie vorhandene Speicherschlüssel bleiben für bestehende Links und Vorgänge erhalten. Der obere Hinweis kennzeichnet die Website als Entwurf und erklärt die ersetzten Unternehmens- und Kundendaten. Formularbestätigung und simulierte Versand-/Prämienaktionen benennen weiterhin, dass keine externe Übertragung, Bearbeitung oder Auszahlung stattfindet. Die rechtlichen Seiten trennen Unternehmensdarstellung und tatsächlichen Betreiber. Fehlende Betreiberangaben sind ausdrücklich benannt. Offene Punkte für die weitere Veröffentlichung stehen in [docs/VEROEFFENTLICHUNGSPRUEFUNG.md](docs/VEROEFFENTLICHUNGSPRUEFUNG.md).

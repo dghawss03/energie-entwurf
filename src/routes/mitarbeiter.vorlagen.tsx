@@ -29,7 +29,7 @@ import type { BackendEmailTemplate } from "@/lib/api-types";
 export const Route = createFileRoute("/mitarbeiter/vorlagen")({
   head: () => ({
     meta: [
-      { title: "E Mail Vorlagen – Mitarbeiter" },
+      { title: "E-Mail-Vorlagen – Mitarbeiter" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
@@ -90,8 +90,8 @@ function TemplatesPage() {
 
   return (
     <AdminShell
-      title="E Mail Vorlagen"
-      subtitle="Gespeicherte Vorlagen entlang des Lead Ablaufs verwalten"
+      title="E-Mail-Vorlagen"
+      subtitle="Textvorlagen für die Anfragebearbeitung verwalten. Es ist kein E-Mail-Versand eingerichtet."
       actions={
         <Button size="sm" onClick={() => openEditor()}>
           <Plus className="mr-2 h-4 w-4" />

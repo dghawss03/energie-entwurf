@@ -24,6 +24,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Progress } from "@/components/ui/progress";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { cn } from "@/lib/utils";
+import { sitePath } from "@/lib/site-url";
 import { track } from "@/lib/track";
 import {
   energyTypes,
@@ -334,11 +335,11 @@ export function MultiStepForm({
           >
             {submitting ? (
               <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Sende…
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Wird gespeichert…
               </>
             ) : (
               <>
-                Persönliches Angebot erhalten <ArrowRight className="ml-1 h-4 w-4" />
+                Anfrage abschließen <ArrowRight className="ml-1 h-4 w-4" />
               </>
             )}
           </Button>
@@ -518,7 +519,7 @@ function Step3({ data, set }: StepProps) {
     <Field>
       <StepHead
         title="Wo wohnen Sie?"
-        sub="Tarife sind regional unterschiedlich – wir brauchen mindestens Ihre PLZ."
+        sub="Ihre Postleitzahl hilft, Tarife für Ihre Region einzuordnen."
       />
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
@@ -585,7 +586,7 @@ function Step4({
       <Field>
         <StepHead
           title="Jahresabrechnung hochladen"
-          sub="Gewerbe, Hausverwaltungen und mehrere Standorte prüfen wir manuell – ohne unpassenden Haushaltsrechner."
+          sub="Für Gewerbe, Hausverwaltungen und mehrere Standorte sind die Angaben aus Ihrer Rechnung erforderlich."
         />
         <InvoiceUpload
           files={invoiceFiles}
@@ -795,7 +796,7 @@ function Step6({ data, set }: StepProps) {
     <Field>
       <StepHead
         title="Was ist Ihnen wichtig?"
-        sub="Mehrfachauswahl möglich – wir richten die Tarife danach aus."
+        sub="Wählen Sie aus, was Ihnen bei Ihrem Tarif wichtig ist. Mehrere Angaben sind möglich."
       />
       <div className="flex flex-wrap gap-2">
         {goals.map((g) => {
@@ -902,8 +903,8 @@ function Step7({ data, set }: StepProps) {
 
       <div className="mt-5 rounded-xl border border-border bg-surface p-4 text-xs text-muted-foreground">
         <ShieldCheck className="mr-1.5 inline h-4 w-4 text-success" />
-        Ihre Angaben werden zweckgebunden nach den geltenden Datenschutzvorgaben verarbeitet.
-        Weitere Informationen finden Sie in unserer Datenschutzerklärung.
+        Ihre Angaben bleiben in diesem Browser. Informationen zur Speicherung und Löschung
+        finden Sie in unserer Datenschutzerklärung.
       </div>
 
       <div className="mt-5 space-y-3">
@@ -914,11 +915,11 @@ function Step7({ data, set }: StepProps) {
             onCheckedChange={(v) => set("datenschutzAkzeptiert", !!v as true)}
           />
           <span>
-            Ich akzeptiere die{" "}
-            <a href="/datenschutz" target="_blank" rel="noopener noreferrer" className="underline">
+            Ich habe die{" "}
+            <a href={sitePath("/datenschutz")} target="_blank" rel="noopener noreferrer" className="underline">
               Datenschutzerklärung
-            </a>
-            .
+            </a>{" "}
+            gelesen.
           </span>
         </label>
         <label className="flex items-start gap-3 text-sm text-foreground">
@@ -938,8 +939,8 @@ function Step8({ invoiceFiles, invoiceError, onInvoiceChange, onInvoiceRemove }:
   return (
     <Field>
       <StepHead
-        title="Letzter Schritt – Rechnung optional"
-        sub="Eine alte Jahresabrechnung beschleunigt die manuelle Prüfung. Sie können sie auch später nachreichen."
+        title="Rechnung ergänzen"
+        sub="Eine Jahresabrechnung enthält Verbrauch und Vertragsdaten. Das Hochladen ist optional; Sie können die Datei später im Vorgang ergänzen."
       />
       <InvoiceUpload
         files={invoiceFiles}
@@ -950,8 +951,9 @@ function Step8({ invoiceFiles, invoiceError, onInvoiceChange, onInvoiceRemove }:
 
       <div className="mt-6 rounded-xl bg-primary/5 p-4 text-sm text-primary">
         <CheckCircle2 className="mr-1.5 inline h-4 w-4 text-success" />
-        Nach dem Absenden wird Ihre Anfrage persönlich geprüft. Für eine direkte Beratung erreichen
-        Sie uns unter der auf der Kontaktseite angegebenen Telefonnummer.
+        Beim Absenden wird Ihre Anfrage nur in diesem Browser gespeichert. Sie wird nicht an
+        einen Energieanbieter übermittelt und nicht extern bearbeitet. Bitte verwenden Sie
+        erfundene Angaben und Dokumente ohne personenbezogene Daten.
       </div>
     </Field>
   );

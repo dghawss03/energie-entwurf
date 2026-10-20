@@ -11,17 +11,12 @@ export const Route = createFileRoute("/impressum")({
   component: () => (
     <StaticPage
       title="Impressum"
-      lead="Impressum – Prüfentwurf. Die markierten Angaben sind vor Veröffentlichung zu vervollständigen."
+      lead="Angaben zur Unternehmensdarstellung und zum Betreiber dieser Website."
     >
-      <p className="text-xs leading-relaxed text-muted-foreground">
-        Rechtstext in Vorbereitung. Markierte Unternehmensangaben werden vor Veröffentlichung
-        vervollständigt.
-      </p>
-      <h2>Unternehmensangaben – Kundenentwurf</h2>
+      <h2>Unternehmensdarstellung</h2>
       <p>
-        Entwurf Energie ist der Unternehmensname dieses Kundenentwurfs. Die nachfolgenden
-        Musterfelder gehören zur Kundenwebsite und benennen nicht den tatsächlichen Betreiber dieser
-        Testversion.
+        Entwurf Energie bezeichnet das dargestellte Energieunternehmen. Die folgenden Angaben
+        gehören zu dieser Unternehmensdarstellung und sind keine Betreiberangaben von dghWeb.
       </p>
       <ul>
         <li>Firma: Entwurf Energie</li>
@@ -32,9 +27,8 @@ export const Route = createFileRoute("/impressum")({
       <h2>Tatsächlicher Website-Betreiber: dghWeb</h2>
       <p>
         <strong>
-          Platzhalter: Hier ausschließlich die echten Angaben des für diese Website verantwortlichen
-          Betreibers hinter dghWeb einsetzen. Die Projektbezeichnung allein ist keine vollständige
-          rechtliche Identifikation.
+          Die vollständige rechtliche Identität und die Kontaktdaten des Betreibers hinter dghWeb
+          sind noch nicht hinterlegt. Die Bezeichnung dghWeb allein ersetzt diese Angaben nicht.
         </strong>
       </p>
       <ul>
@@ -52,7 +46,7 @@ export const Route = createFileRoute("/impressum")({
         </li>
         <li>
           <strong>E-Mail:</strong> [AUSFÜLLEN: tatsächlich erreichbare Betreiber-E-Mail-Adresse;
-          keine Demo-Adresse]
+          keine example.com-Adresse]
         </li>
         <li>
           <strong>Weiterer unmittelbarer Kontaktweg:</strong> [AUSFÜLLEN / PRÜFEN: geeigneter
@@ -87,18 +81,16 @@ export const Route = createFileRoute("/impressum")({
 
       <h2>Inhalte und Nutzungszweck</h2>
       <p>
-        Die tatsächliche Website dient der Präsentation einer interaktiven Softwaredemo für
-        Energievergleiche und digitale Kundenverwaltung. Demo-Anfragen werden lokal im Browser
-        gespeichert. Es gibt keine echte Energieberatung, Zahlung oder Nachrichtenzustellung durch
-        das fiktive Unternehmen.
+        dghWeb präsentiert mit dieser Website Energievergleiche und digitale Kundenverwaltung.
+        Formulare speichern Eingaben ausschließlich im Browser. Es werden keine Energielieferverträge
+        geschlossen, Zahlungen ausgelöst oder Anfragen an Energieanbieter übermittelt.
       </p>
       <p>
         Logo, Illustrationen und Energiefluss-Animation wurden für Entwurf Energie erstellt.
         Technische Bibliotheken und Schriften behalten ihre jeweiligen Lizenzen.
       </p>
       <p className="text-xs text-muted-foreground">
-        Prüfentwurf · Stand: 20. Oktober 2026 · Vor Veröffentlichung prüfen, ausfüllen und nicht
-        zutreffende Felder entfernen.
+        Stand: 20. Oktober 2026
       </p>
     </StaticPage>
   ),

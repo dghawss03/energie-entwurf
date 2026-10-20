@@ -134,7 +134,7 @@ export function Footer() {
               onClick={() => window.dispatchEvent(new Event(COOKIE_CONSENT_OPEN_EVENT))}
               className="inline-flex min-h-8 items-center hover:text-success"
             >
-              Cookie Einstellungen
+              Cookie-Einstellungen
             </button>
           </div>
         </div>

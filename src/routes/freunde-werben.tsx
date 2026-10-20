@@ -87,7 +87,7 @@ const conditions = [
   {
     title: "Prämie: 30-€-Gutschein",
     content:
-      "Testumgebung: Prämien werden nur als Status dargestellt. Es erfolgt keine Auszahlung oder Zustellung.",
+      "Prämien werden hier ausschließlich als Status erfasst. Es erfolgt keine Auszahlung oder Zustellung.",
   },
 ];
 
@@ -104,7 +104,7 @@ function FreundeWerbenPage() {
       await requestReferralCode(email.trim());
       setSubmitted(true);
       toast.success(
-        "Empfehlungscode gespeichert. Testumgebung: keine Nachricht und keine Auszahlung.",
+        "Empfehlungscode lokal gespeichert. Es wurde keine Nachricht versendet und keine Prämie ausgezahlt.",
         {
           duration: 6000,
         },
@@ -131,7 +131,7 @@ function FreundeWerbenPage() {
               30 € Gutschein pro Empfehlung
             </div>
             <h1 className="font-display text-4xl font-extrabold leading-tight text-primary-foreground md:text-5xl">
-              Entwurf Energie empfehlen &ndash; 30 &euro; sichern
+              Entwurf Energie empfehlen und 30 &euro; sichern
             </h1>
             <p className="mt-5 text-lg text-primary-foreground/80">
               Teilen Sie Ihren persönlichen Link. Für jeden qualifizierten und abgeschlossenen
@@ -261,7 +261,7 @@ function FreundeWerbenPage() {
                     <Input
                       id="referral-email"
                       type="email"
-                      placeholder="demo@example.com"
+                      placeholder="name@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required

@@ -12,19 +12,13 @@ export const Route = createFileRoute("/datenschutz")({
   component: () => (
     <StaticPage
       title="Datenschutz"
-      lead="Datenschutzhinweise – Entwurf. Die markierten Betreiberangaben und rechtlichen Grundlagen sind vor Veröffentlichung zu vervollständigen."
+      lead="Informationen zu Hosting, lokal gespeicherten Daten und Ihren Datenschutzrechten."
     >
-      <p className="text-xs leading-relaxed text-muted-foreground">
-        Rechtstext in Vorbereitung. Markierte Unternehmensangaben werden vor Veröffentlichung
-        vervollständigt.
-      </p>
       <h2>1. Verantwortliche Stelle</h2>
       <p>
-        Entwurf Energie ist ein fiktives Energieunternehmen innerhalb einer Softwaredemo von dghWeb.
-        Es gibt keine echten Energietarife oder Vertragsabschlüsse. Datenschutzrechtlich
-        verantwortlich ist der tatsächliche Betreiber des dghWeb-Präsentationsprojekts, nicht das
-        fiktive Unternehmen. Die vollständige rechtliche Identität hinter dghWeb ist unten noch
-        einzutragen.
+        Datenschutzrechtlich verantwortlich ist der Betreiber dghWeb. Entwurf Energie ist die
+        dargestellte Unternehmensmarke und keine eigenständige verantwortliche Stelle. Die
+        vollständige Betreiberidentität und der Datenschutzkontakt sind noch nicht hinterlegt.
       </p>
       <ul>
         <li>
@@ -45,15 +39,14 @@ export const Route = createFileRoute("/datenschutz")({
       </ul>
       <p>
         Die Angaben müssen mit dem <Link to="/impressum">Impressum</Link> übereinstimmen.
-        Demo-Adressen mit example.com sind keine Kontaktstellen für Datenschutzanliegen. Bitte geben
-        Sie in Formulare ausschließlich erfundene Angaben ein und laden Sie nur selbst erstellte
-        Beispieldokumente hoch.
+        Adressen mit example.com sind keine Kontaktstellen für Datenschutzanliegen. Bitte geben
+        Sie in Formulare ausschließlich erfundene Angaben ein und laden Sie nur Dokumente ohne personenbezogene Daten hoch.
       </p>
 
       <h2>2. Auslieferung über GitHub Pages</h2>
       <p>
-        Für die öffentliche Bereitstellung ist GitHub Pages unter
-        dghawss03.github.io/energie-entwurf/ vorgesehen. Der Dienst liefert HTML, CSS, JavaScript,
+        Die Website wird über GitHub Pages unter
+        dghawss03.github.io/energie-entwurf/ bereitgestellt. Der Dienst liefert HTML, CSS, JavaScript,
         Bilder und weitere statische Dateien aus. GitHub erhält dabei technische Verbindungsdaten.
         Laut GitHub werden Besucher-IP-Adressen zu Sicherheitszwecken protokolliert und gespeichert,
         auch ohne GitHub-Anmeldung.
@@ -78,7 +71,7 @@ export const Route = createFileRoute("/datenschutz")({
         .
       </p>
       <p>
-        <strong>Vor Veröffentlichung ergänzen:</strong> [zuständige GitHub-Gesellschaft,
+        <strong>Angaben zum Hosting:</strong> [zuständige GitHub-Gesellschaft,
         datenschutzrechtliche Rollen / gegebenenfalls Vereinbarungen, zutreffende Rechtsgrundlage
         und berechtigtes Interesse sowie verfügbare Angaben zur Aufbewahrung der Hosting-Protokolle
         prüfen]. Eine konkrete Löschfrist für diese Protokolle wurde nicht verifiziert; es wird
@@ -102,33 +95,33 @@ export const Route = createFileRoute("/datenschutz")({
 
       <h2>4. Gespeicherte Daten und Speicherdauer</h2>
       <p>
-        Formulare, Mitarbeiterbereich und CRM verwenden eine lokale Datenschicht. Demo-Eingaben
+        Formulare, Mitarbeiterbereich und CRM verwenden eine lokale Datenschicht. Eingaben
         werden von der Anwendung nicht an einen Energieanbieter, eine produktive Datenbank oder
-        einen Maildienst übermittelt. Auch die Demo-Anmeldung ist lokal; sie ist kein echtes
+        einen Maildienst übermittelt. Auch die Anmeldung ist lokal; sie ist kein echtes
         Kundenkonto und schützt keine vertraulichen Informationen.
       </p>
       <ul>
         <li>
-          <strong>localStorage:</strong> Beispiel-Leads, eingegebene Kontakt- und Verbrauchsdaten,
-          CRM-Status, Notizen, Wiedervorlagen, Profile, Artikel, Tarife und weitere Demoänderungen
+          <strong>localStorage:</strong> Vorgänge, eingegebene Kontakt- und Verbrauchsdaten,
+          CRM-Status, Notizen, Wiedervorlagen, Profile, Artikel, Tarife und weitere Änderungen
           bleiben bis zum Zurücksetzen oder Löschen der Website-Daten gespeichert. Es gibt keine
           eingebaute zeitliche Löschfrist.
         </li>
         <li>
-          <strong>Lokale Anmeldung:</strong> Die gewählte Demo-Benutzerkennung liegt ebenfalls im
+          <strong>Lokale Anmeldung:</strong> Die gewählte Benutzerkennung liegt ebenfalls im
           localStorage. Abmelden oder Zurücksetzen entfernt diese Kennung; bloßes Schließen des
           Browsers meldet nicht zuverlässig ab.
         </li>
         <li>
           <strong>sessionStorage:</strong> Formularentwurf, aktueller Schritt und Bestätigungsnummer
-          gelten für die Tabsitzung. Entwurfsdaten werden nach erfolgreicher Übermittlung entfernt.
+          gelten für die Tabsitzung. Entwurfsdaten werden nach erfolgreichem Speichern entfernt.
           Browser können Sitzungen wiederherstellen; das Schließen eines Tabs ist daher keine
           verlässliche vollständige Löschmethode.
         </li>
         <li>
-          <strong>IndexedDB:</strong> Hochgeladene Beispieldokumente werden lokal in der Datenbank
+          <strong>IndexedDB:</strong> Hochgeladene Dokumente werden lokal in der Datenbank
           energie-entwurf-documents-v1 abgelegt. Sie bleiben bis zum Löschen des Dokuments,
-          Zurücksetzen der Demo, Löschen der Website-Daten oder einer Bereinigung durch den Browser
+          Zurücksetzen der lokalen Daten, Löschen der Website-Daten oder einer Bereinigung durch den Browser
           gespeichert.
         </li>
         <li>
@@ -138,7 +131,7 @@ export const Route = createFileRoute("/datenschutz")({
         </li>
       </ul>
       <p>
-        Die Speicher dienen der interaktiven Demo, dem Fortsetzen von Eingaben und dem
+        Die Speicher dienen dem Fortsetzen von Eingaben und dem
         Wiederanzeigen lokaler Änderungen. Es gibt keine geräteübergreifende Synchronisierung.
         Andere Personen im selben Browserprofil können auf gespeicherte Daten zugreifen. Der Browser
         trennt Speicher nach Origin, nicht nach Repository-Pfad; andere Projekte unter demselben
@@ -156,11 +149,11 @@ export const Route = createFileRoute("/datenschutz")({
         In den aktuell eingebundenen Anwendungskomponenten werden nach Quelltextprüfung keine
         eigenen HTTP-Cookies gesetzt. Der Dialog „Cookies &amp; Datenschutz“ speichert die Auswahl
         mit Zeitstempel im localStorage unter energie-entwurf-cookie-consent-v3, ohne automatische
-        Ablaufzeit. Diese Einstellung bleibt beim Zurücksetzen der Demo erhalten und kann separat
+        Ablaufzeit. Diese Einstellung bleibt beim Zurücksetzen der lokalen Daten erhalten und kann separat
         über die Website-Daten des Browsers gelöscht werden.
       </p>
       <p>
-        Die Schalter für Statistik, Marketing und KI-Assistent simulieren Einstellungen. Es sind
+        Die Schalter für Statistik und Marketing speichern lediglich die Auswahl. Es sind
         keine entsprechenden Dienste angeschlossen; auch „Alle akzeptieren“ aktiviert sie nicht. Der
         Dialog ist derzeit keine technische Einwilligungssteuerung für externe Dienste oder das
         Hosting. Die allgemeinen Cookie-Angaben von GitHub für seine eigenen Plattformseiten belegen
@@ -173,7 +166,7 @@ export const Route = createFileRoute("/datenschutz")({
         Supabase einschließlich Auth und Storage, OpenAI, Resend, Turnstile und externe Webhooks
         sind deaktiviert. Es gibt keine eingebundenen Analyse- oder Marketingtracker, Karten-,
         Video- oder Social-Media-Widgets im bereitgestellten Ausgangsstand. Die eigenen Logos,
-        Illustrationen, Beispielbilder sowie der Lottie-Player einschließlich WASM werden als lokale
+        Illustrationen, Bilder sowie der Lottie-Player einschließlich WASM werden als lokale
         Projektdateien ausgeliefert.
       </p>
       <p>
@@ -198,20 +191,19 @@ export const Route = createFileRoute("/datenschutz")({
           § 25 TDDDG
         </a>{" "}
         zu prüfen; eine Ausnahme wegen unbedingter Erforderlichkeit wird nicht pauschal für alle
-        Demofunktionen behauptet.
+        Anwendungsfunktionen behauptet.
       </p>
       <p>
-        Beim vorgesehenen Hosting über GitHub kann eine Verarbeitung außerhalb des EWR in Betracht
+        Beim Hosting über GitHub kann eine Verarbeitung außerhalb des EWR in Betracht
         kommen. [Empfänger, betroffene Länder und konkret einschlägige Übermittlungsgrundlage vor
-        Veröffentlichung prüfen und ergänzen.] Eine Zertifizierung oder andere Garantie wird in
-        diesem Entwurf nicht ungeprüft zugesagt. Eine etwaige Einwilligung müsste tatsächlich
+        Veröffentlichung prüfen und ergänzen.] Eine Zertifizierung oder andere Garantie wird nicht ungeprüft zugesagt. Eine etwaige Einwilligung müsste tatsächlich
         eingeholt und technisch beachtet werden; ein Hinweistext allein genügt dafür nicht.
       </p>
 
       <h2>8. Löschen und Datenschutzrechte</h2>
       <p>
-        Über „Testumgebung zurücksetzen“ auf der Anmeldeseite oder unter Einstellungen können lokale
-        Demoänderungen, Dokumente, Formularentwürfe und die lokale Anmeldung entfernt werden. Zum
+        Über „Lokale Daten zurücksetzen“ auf der Anmeldeseite oder unter Einstellungen können lokale
+        Änderungen, Dokumente, Formularentwürfe und die lokale Anmeldung entfernt werden. Zum
         vollständigen Entfernen einschließlich der gespeicherten Dialogauswahl löschen Sie die
         Website-Daten in den Browsereinstellungen. Dies löscht keine gegebenenfalls beim Hosting
         oder bei externen Anbietern liegenden Protokolle. Der Betreiber kann Ihren lokalen
@@ -235,11 +227,11 @@ export const Route = createFileRoute("/datenschutz")({
       <p>
         [Erreichbaren Datenschutzkontakt oben einsetzen; für den Betreiber zuständige
         Aufsichtsbehörde mit Kontakt / Website nach Feststellung seines Sitzes ergänzen.] Bitte
-        senden Sie Anliegen nicht an die fiktiven Demo-Adressen.
+        verwenden Sie für Anliegen keine example.com-Adressen.
       </p>
       <p className="text-xs text-muted-foreground">
-        Prüfentwurf · Stand: 20. Oktober 2026 · Vor Veröffentlichung prüfen und die markierten
-        Felder vervollständigen. Eine Live-Prüfung von Cookies und Netzverbindungen steht noch aus.
+        Stand: 20. Oktober 2026. Die Prüfung der Hostingangaben, Rechtsgrundlagen und
+        Netzverbindungen ist noch offen.
       </p>
     </StaticPage>
   ),

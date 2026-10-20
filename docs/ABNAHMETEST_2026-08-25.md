@@ -1,4 +1,4 @@
-# Energie Entwurf – Archivhinweis
+# Entwurf Energie – Archivhinweis
 
 Die ursprüngliche Betriebsdokumentation wurde bei der Überführung in die eigenständige Demo von Betreiberangaben, Kundendomains und produktiven Handlungsanweisungen bereinigt. Dieser Dateiname ist lediglich eine historische Referenz und kein Abnahmeprotokoll des aktuellen Demostands.
 

@@ -541,7 +541,7 @@ function LeadDetail() {
       void router.invalidate();
       toast.success("Änderung gespeichert.", {
         description:
-          "Testumgebung: Es erfolgt kein externer Versand und keine Übertragung an Anbieter.",
+          "Es erfolgt kein Versand und keine Übertragung an Anbieter.",
       });
     },
     onError: (error) => toast.error(error.message),
@@ -1152,7 +1152,7 @@ function LeadDetail() {
               </div>
               <p className="mt-3 text-xs text-muted-foreground">
                 {lead.score > 80
-                  ? "Heißer Lead – sofort kontaktieren"
+                  ? "Hohe Priorität: Kontaktaufnahme einplanen"
                   : lead.score > 50
                     ? "Solider Lead"
                     : "Niedrige Priorität"}

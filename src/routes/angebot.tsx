@@ -65,7 +65,7 @@ const faqs = [
   },
   {
     q: "Was passiert mit meinen persönlichen Daten?",
-    a: "Wir verarbeiten Ihre Angaben zweckgebunden und nach den geltenden Datenschutzvorgaben. Details zu eingesetzten Diensten und Empfängern finden Sie in unserer Datenschutzerklärung.",
+    a: "Ihre Angaben bleiben in Ihrem Browser. Eine Übermittlung an einen Anbieter findet nicht statt. Einzelheiten zur Speicherung und Löschung stehen in der Datenschutzerklärung.",
   },
   {
     q: "Bin ich verpflichtet, ein Angebot anzunehmen?",
@@ -101,7 +101,7 @@ function AngebotPage() {
           <div className="hidden items-center gap-5 text-xs text-muted-foreground sm:flex">
             <span className="inline-flex items-center gap-1.5">
               <Lock className="h-3.5 w-3.5 text-success" />
-              Lokal im Browser
+              Verbrauch und Konditionen
             </span>
             <span className="inline-flex items-center gap-1.5">
               <ShieldCheck className="h-3.5 w-3.5 text-success" />
@@ -172,7 +172,7 @@ function AngebotPage() {
           <div className="min-w-0 rounded-2xl border border-border bg-background p-4 shadow-card sm:p-6 md:p-8">
             {referralCode && (
               <div className="mb-4 rounded-lg border border-success/20 bg-success/10 p-3 text-sm text-success">
-                🎁 <strong>Empfehlung aktiv:</strong> Sie wurden von einem Kunden empfohlen!
+                🎁 <strong>Empfehlung aktiv:</strong> Ein Empfehlungscode wurde übernommen.
               </div>
             )}
             <MultiStepForm
@@ -285,7 +285,7 @@ function AngebotPage() {
             Bereit, zu wechseln?
           </h2>
           <p className="mt-3 text-primary-foreground/70">
-            Übermitteln Sie Ihre Angaben. Wir prüfen die passenden Möglichkeiten persönlich.
+            Erfassen Sie Verbrauch und Wünsche als Grundlage für Ihre Tarifauswahl.
           </p>
           <a
             href="#form"
@@ -295,7 +295,7 @@ function AngebotPage() {
           </a>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-primary-foreground/40">
             <span className="inline-flex items-center gap-1.5">
-              <Lock className="h-3.5 w-3.5" /> Lokal im Browser
+              <Lock className="h-3.5 w-3.5" /> Verbrauch und Konditionen
             </span>
             <span className="inline-flex items-center gap-1.5">
               <ShieldCheck className="h-3.5 w-3.5" /> Persönliche Tarifprüfung

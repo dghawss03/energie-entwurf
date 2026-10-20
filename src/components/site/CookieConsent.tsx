@@ -108,8 +108,8 @@ export function CookieConsent() {
               </div>
               <p className="mt-1 text-sm text-muted-foreground">
                 Entwurf Energie speichert notwendige Einstellungen, damit diese Website zuverlässig
-                funktioniert. Die optionalen Schalter simulieren Einstellungen und aktivieren keine
-                Dienste. Hinweise zu den aktuell geladenen Schriften stehen in unserer{" "}
+                funktioniert. Optionale Dienste sind nicht eingebunden. Ihre Auswahl wird gespeichert, aktiviert
+                aber keine zusätzlichen Dienste. Weitere Informationen finden Sie in unserer{" "}
                 <Link to="/datenschutz" className="underline hover:text-primary">
                   Datenschutzerklärung
                 </Link>
@@ -126,13 +126,13 @@ export function CookieConsent() {
                   />
                   <Row
                     title="Statistik"
-                    desc="Demo-Einstellung ohne angebundenen Statistikdienst."
+                    desc="Kein Statistikdienst eingebunden."
                     checked={analytics}
                     onCheck={setAnalytics}
                   />
                   <Row
                     title="Marketing"
-                    desc="Demo-Einstellung ohne angebundenen Marketingdienst."
+                    desc="Kein Marketingdienst eingebunden."
                     checked={marketing}
                     onCheck={setMarketing}
                   />

@@ -217,7 +217,7 @@ function WiedervorlagePage() {
             <div className="rounded-2xl border border-dashed p-16 text-center text-muted-foreground">
               <CalendarClock className="mx-auto h-10 w-10 text-muted-foreground/50" />
               <div className="mt-3 font-medium">Keine offenen Wiedervorlagen</div>
-              <p className="mt-1 text-sm">Alles erledigt – starke Leistung.</p>
+              <p className="mt-1 text-sm">Aktuell sind keine Aufgaben offen.</p>
             </div>
           )}
         </div>

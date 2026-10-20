@@ -56,8 +56,8 @@ function ThanksPage() {
         </div>
 
         <div className="mx-auto mt-6 max-w-xl rounded-xl border border-success/20 bg-success/5 px-4 py-3 text-sm leading-relaxed text-muted-foreground sm:px-5">
-          Ihre Anfrage wurde ausschließlich in dieser Testumgebung in Ihrem Browser gespeichert. Es
-          erfolgt keine externe Übermittlung oder Bearbeitung; es werden keine E-Mails versendet.
+          Ihre Anfrage ist nur in diesem Browser gespeichert. Sie wurde nicht an einen
+          Energieanbieter übermittelt und wird nicht extern bearbeitet. Es wird keine E-Mail versendet.
         </div>
 
         {rechnung === "nachreichen" && (

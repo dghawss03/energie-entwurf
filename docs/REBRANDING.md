@@ -1,4 +1,4 @@
-# Energie Entwurf – Rebranding
+# Entwurf Energie – Rebranding
 
 Stand: 20. Oktober 2026. Demo-Projekt von dghWeb – nicht für echte Vertragsanfragen.
 

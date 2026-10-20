@@ -7,12 +7,12 @@ export const Route = createFileRoute("/agb")({
   component: () => (
     <StaticPage
       title="Allgemeine Geschäftsbedingungen"
-      lead="Prüfentwurf – die Bedingungen werden für die jeweilige Unternehmens- und Vertragsgestaltung individuell ergänzt."
+      lead="Informationen zu Leistungen, Anfragen und Vertragsbedingungen."
     >
       <h2>Geltungsbereich</h2>
       <p>
-        Diese Seite bereitet die Geschäftsbedingungen der Kundenwebsite Entwurf Energie vor. Sie
-        enthält noch keine finalen Vertragsklauseln.
+        Diese Seite beschreibt den Rahmen für die Unternehmensdarstellung Entwurf Energie.
+        Verbindliche Vertragsbedingungen sind nicht hinterlegt.
       </p>
       <h2>Unternehmens- und Leistungsangaben</h2>
       <ul>
@@ -21,21 +21,17 @@ export const Route = createFileRoute("/agb")({
         <li>Leistungsumfang und Vertragsschluss: [Individuelle Regelungen ergänzen]</li>
         <li>Preise, Laufzeit und Beendigung: [Zum Vertragsmodell passende Bedingungen ergänzen]</li>
       </ul>
-      <h2>Nutzung dieser Testversion</h2>
+      <h2>Anfragen und Vertragsschluss</h2>
       <p>
-        Anfragen und Bearbeitungsstände werden ausschließlich in dieser Testumgebung im Browser
-        gespeichert. Es werden keine Energieliefer- oder Vermittlungsverträge geschlossen, keine
-        Zahlungen ausgelöst und keine Anfragen extern bearbeitet. Bitte verwenden Sie hier nur
-        erfundene Angaben und geeignete Testdokumente.
+        Das Ausfüllen und Speichern einer Anfrage führt zu keinem Energieliefer- oder
+        Vermittlungsvertrag. Eingaben bleiben im Browser. Es erfolgen weder eine externe
+        Bearbeitung noch Zahlungen oder eine Übermittlung an Energieanbieter.
       </p>
       <p>
-        Der tatsächliche Betreiber dieser Website ist dghWeb. Die noch zu vervollständigenden
-        Betreiberangaben stehen im <Link to="/impressum">Impressum</Link>; Informationen zu
+        Betreiber dieser Website ist dghWeb. Die Betreiberangaben stehen im{" "}
+        <Link to="/impressum">Impressum</Link>; Informationen zu
         Speicherung und Löschung finden Sie unter <Link to="/datenschutz">Datenschutz</Link>. Die
-        Unternehmensplatzhalter oben ersetzen diese Angaben nicht.
-      </p>
-      <p className="text-xs text-muted-foreground">
-        Platzhalter für individuelle Bedingungen · Vor Veröffentlichung prüfen.
+        Unternehmensangaben oben ersetzen diese Betreiberangaben nicht.
       </p>
     </StaticPage>
   ),

@@ -27,7 +27,7 @@ describe("Entwurf Energie branding", () => {
       image: "/assets/new-illustration.svg",
     });
     expect(previous.email).toBe("demo@example.com");
-    expect(DEMO_PROJECT_NOTICE).toContain("dghWeb");
+    expect(DEMO_PROJECT_NOTICE).toContain("Diese Website befindet sich derzeit noch im Entwurf.");
   });
   it("uses newly branded vector assets and neutral public contact addresses", () => {
     const publicFiles = [
@@ -51,11 +51,14 @@ describe("Entwurf Energie branding", () => {
     expect(assets.some((path) => path.endsWith("energie-entwurf-logo-dark.svg"))).toBe(true);
     expect(assets.some((path) => path.endsWith("energie-entwurf-logo-light.svg"))).toBe(true);
   });
-  it("marks every legal page as a draft and retains local-only integration safeguards", () => {
+  it("keeps operator disclosures separate from the presented company and integrations local-only", () => {
     for (const page of ["impressum", "datenschutz", "agb", "widerruf"]) {
       const text = readFileSync(join(root, `src/routes/${page}.tsx`), "utf8");
-      expect(text).toMatch(/Platzhalter|Prüfentwurf/);
-      expect(text).toMatch(/vor Veröffentlichung prüfen/i);
+      expect(text).toMatch(/\[(?:.+ergänzen|AUSFÜLLEN:)/);
+      expect(text).toContain("dghWeb");
+      expect(text).toMatch(
+        /keine Energielieferverträge|keinem Energieliefer|keine Energie-|nicht an einen Energieanbieter/,
+      );
     }
     for (const path of files(join(root, "src/routes/api"))) {
       expect(readFileSync(path, "utf8"), path).toContain("disabledDemoApi");

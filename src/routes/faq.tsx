@@ -57,11 +57,11 @@ const categories: { icon: typeof Zap; title: string; faqs: { q: string; a: strin
       },
       {
         q: "Gibt es versteckte Gebühren?",
-        a: "Nein. Weder eine Wechselgebühr noch eine Servicepauschale. Was Sie zahlen, ist ausschließlich der Tarifpreis des neuen Anbieters.",
+        a: "Achten Sie im Angebot auf Grundpreis, Arbeitspreis und mögliche Zusatzkosten. Vergleichen Sie auch die Kosten nach Ablauf von Boni oder Preisgarantien.",
       },
       {
-        q: "Ist Entwurf Energie ein echter Vermittler?",
-        a: "Die Tarifprüfung ist kostenlos und unverbindlich.",
+        q: "Worauf kommt es beim Tarifvergleich an?",
+        a: "Vergleichen Sie die Jahreskosten einschließlich Grundpreis, Arbeitspreis und möglicher Boni. Achten Sie außerdem auf Laufzeit, Preisgarantie und Kündigungsfrist.",
       },
     ],
   },
@@ -93,7 +93,7 @@ const categories: { icon: typeof Zap; title: string; faqs: { q: string; a: strin
     faqs: [
       {
         q: "Welche Daten brauchen Sie von mir?",
-        a: "PLZ, ungefährer Jahresverbrauch und Kontaktdaten reichen für die erste Prüfung. Eine alte Jahresrechnung beschleunigt das Angebot. Ist aber kein Muss.",
+        a: "Für private Haushalte reichen Postleitzahl, Jahresverbrauch und Kontaktdaten. Eine Jahresrechnung kann die Angaben ergänzen. Für Gewerbe und mehrere Standorte ist eine Rechnung erforderlich.",
       },
       {
         q: "Was, wenn ich meinen Verbrauch nicht kenne?",
@@ -111,15 +111,15 @@ const categories: { icon: typeof Zap; title: string; faqs: { q: string; a: strin
     faqs: [
       {
         q: "Was passiert mit meinen Daten?",
-        a: "Ihre Daten werden für die Bearbeitung Ihrer Anfrage und die gewünschte Vermittlung verarbeitet. Welche Dienstleister und Empfänger beteiligt sein können, erläutert unsere Datenschutzerklärung.",
+        a: "Ihre Eingaben werden ausschließlich lokal in Ihrem Browser gespeichert. Es erfolgt keine Weiterleitung an Energieanbieter oder Maildienste. Die Datenschutzerklärung beschreibt Speicherung und Löschmöglichkeiten.",
       },
       {
         q: "Werde ich nach der Anfrage mit Werbung zugeschüttet?",
-        a: "Ihre Anfrage wird für die persönliche Bearbeitung genutzt. Einen Newsletter oder zusätzliche Werbung erhalten Sie nur, wenn dafür eine passende Rechtsgrundlage oder Einwilligung besteht.",
+        a: "Über diese Website werden keine Newsletter oder Werbenachrichten versendet.",
       },
       {
         q: "Kann ich meine Daten löschen lassen?",
-        a: "Ihre Angaben werden in dieser Testumgebung nur in Ihrem Browser gespeichert. Nutzen Sie im Mitarbeiterbereich die Funktion ‚Testumgebung zurücksetzen‘ oder löschen Sie die Website-Daten in den Browsereinstellungen. Die Kontaktadressen dieses Entwurfs sind keine erreichbaren Kontaktstellen.",
+        a: "Nutzen Sie im Mitarbeiterbereich die Funktion „Lokale Daten zurücksetzen“ oder löschen Sie die Website-Daten in den Browsereinstellungen. Weitere Hinweise finden Sie in der Datenschutzerklärung.",
       },
     ],
   },
@@ -137,7 +137,7 @@ const categories: { icon: typeof Zap; title: string; faqs: { q: string; a: strin
       },
       {
         q: "Bin ich verpflichtet zu wechseln?",
-        a: "Nein. Die Beratung ist absolut unverbindlich. Selbst nach Angebot entscheiden Sie frei. Wir respektieren jedes Nein.",
+        a: "Nein. Eine Tarifprüfung verpflichtet Sie nicht zu einem Wechsel. Sie entscheiden, ob ein Angebot zu Ihnen passt.",
       },
     ],
   },

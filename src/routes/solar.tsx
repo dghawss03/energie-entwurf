@@ -24,7 +24,7 @@ export const Route = createFileRoute("/solar")({
       {
         name: "description",
         content:
-          "Erste Orientierung zu Photovoltaik, Stromspeicher und Wärmepumpe – verständlich erklärt und auf Ihre Immobilie bezogen.",
+          "Erste Orientierung zu Photovoltaik, Stromspeicher und Wärmepumpe verständlich erklärt und auf Ihre Immobilie bezogen.",
       },
       { property: "og:title", content: "Solar & Wärmepumpe | Entwurf Energie" },
       {

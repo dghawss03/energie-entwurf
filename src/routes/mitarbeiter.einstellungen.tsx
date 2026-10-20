@@ -109,7 +109,7 @@ function SettingsPage() {
       setCurrentPw("");
       setNewPw("");
       setConfirmPw("");
-      toast.info("Demo: Kein Passwort geändert. Der Zugang bleibt Demo2026!.");
+      toast.info("Passwortänderungen sind nicht eingerichtet. Das Zugangspasswort bleibt Demo2026!.");
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Unbekannter Fehler";
       toast.error(`Fehler: ${msg}`);
@@ -141,7 +141,7 @@ function SettingsPage() {
         variant="outline"
         className="mb-4"
         onClick={async () => {
-          if (!window.confirm("Alle gespeicherten Vorgänge und Dokumente dieser Testumgebung löschen?")) return;
+          if (!window.confirm("Alle lokal gespeicherten Vorgänge und Dokumente löschen?")) return;
           try {
             await resetDemo();
             window.location.assign("/mitarbeiter/login");
@@ -150,7 +150,7 @@ function SettingsPage() {
           }
         }}
       >
-        Testumgebung zurücksetzen
+        Lokale Daten zurücksetzen
       </Button>
       <div className="grid gap-6 lg:grid-cols-2">
         {/* ── PROFIL ─────────────────────────────────────────────────────── */}
