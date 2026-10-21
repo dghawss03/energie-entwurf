@@ -132,18 +132,18 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border bg-background">
-      <div className="mx-auto grid max-w-6xl grid-cols-[auto_minmax(0,1fr)] items-center gap-x-4 px-4">
+      <div className="mx-auto grid max-w-6xl grid-cols-[auto_minmax(0,1fr)] items-center gap-x-4 px-4 lg:grid-cols-[auto_minmax(0,1fr)_auto]">
         {/* Top utility row */}
         <div className="contents">
           <Link
             to="/"
             aria-label="Entwurf Energie Startseite"
-            className="col-start-1 row-start-1 flex shrink-0 items-center rounded-md transition-opacity hover:opacity-80 lg:row-span-2 lg:py-4"
+            className="col-start-1 row-start-1 flex shrink-0 items-center rounded-md transition-opacity hover:opacity-80"
           >
-            <BrandLogo priority className="w-[11.5rem] sm:w-[13.8rem]" />
+            <BrandLogo priority className="w-[11.5rem] sm:w-[13.8rem] lg:w-[11.5rem] xl:w-[13rem]" />
           </Link>
 
-          <div className="col-start-2 row-start-1 flex h-16 min-w-0 items-center justify-end gap-1 lg:h-10 lg:gap-5">
+          <div className="col-start-2 row-start-1 flex h-16 min-w-0 items-center justify-end gap-1 whitespace-nowrap lg:col-start-3 lg:h-20 lg:gap-3 xl:gap-5">
             <Link
               to="/kontakt"
               className="hidden items-center gap-2 text-sm font-semibold text-primary transition hover:text-success lg:inline-flex"
@@ -177,7 +177,7 @@ export function Header() {
         {/* Main nav row */}
         <nav
           ref={navRef}
-          className="relative col-start-2 row-start-2 hidden h-12 min-w-0 items-center justify-end gap-1 lg:flex xl:gap-4"
+          className="relative col-start-2 row-start-1 hidden h-20 min-w-0 items-center justify-start lg:flex xl:gap-1"
           onMouseLeave={scheduleClose}
         >
           {mainNav.map((n) => {
@@ -206,7 +206,7 @@ export function Header() {
                   to={n.to}
                   aria-current={isActive ? "page" : undefined}
                   className={cn(
-                    "relative z-10 inline-flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-sm transition-colors",
+                    "relative z-10 inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2 py-2 text-sm transition-colors xl:px-3",
                     isActive
                       ? "font-semibold text-success"
                       : "font-medium text-primary hover:text-success",
