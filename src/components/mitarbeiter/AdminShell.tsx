@@ -109,12 +109,12 @@ export function AdminShell({
   }
 
   return (
-    <div className="min-h-screen min-w-0 bg-muted/30">
+    <div className="flex min-h-screen min-w-0 items-start bg-muted/30">
       <Toaster position="top-right" richColors closeButton />
-      <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r bg-background lg:flex">
-        <div className="flex h-24 items-center border-b px-5">
+      <aside className="sticky top-0 z-30 hidden h-dvh w-64 shrink-0 flex-col self-start border-r bg-background lg:flex">
+        <div className="flex h-16 shrink-0 items-center border-b px-5">
           <Link to="/mitarbeiter/dashboard" className="block min-w-0" aria-label="Zum Dashboard">
-            <BrandLogo priority className="w-full max-w-[12rem]" />
+            <BrandLogo priority className="w-full max-w-[10.5rem]" />
             <div className="mt-1 text-xs font-medium text-muted-foreground">Mitarbeiter CRM</div>
           </Link>
         </div>
@@ -143,8 +143,8 @@ export function AdminShell({
         </div>
       </aside>
 
-      <div className="min-w-0 lg:pl-64">
-        <header className="sticky top-0 z-20 flex h-16 items-center gap-4 border-b bg-background/80 px-4 backdrop-blur lg:px-8">
+      <div className="min-w-0 flex-1">
+        <header className="sticky top-0 z-20 flex h-16 items-center gap-3 border-b bg-background/80 px-4 backdrop-blur lg:px-8">
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
               <Button
@@ -195,7 +195,7 @@ export function AdminShell({
             <BrandLogo priority className="w-[9.5rem] sm:w-[10.5rem]" />
           </Link>
           <form
-            className="relative hidden flex-1 max-w-md md:block"
+            className="relative hidden min-w-0 flex-1 max-w-md md:block"
             role="search"
             onSubmit={handleGlobalSearch}
           >
@@ -215,7 +215,7 @@ export function AdminShell({
               className="pl-10"
             />
           </form>
-          <div className="flex flex-1 items-center justify-end gap-2">
+          <div className="ml-auto flex shrink-0 items-center justify-end gap-2">
             {user && (
               <div className="flex items-center gap-2 rounded-full border px-2 py-1">
                 <Avatar className="h-7 w-7">

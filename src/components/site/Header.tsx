@@ -132,30 +132,28 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border bg-background">
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto grid max-w-6xl grid-cols-[auto_minmax(0,1fr)] items-center gap-x-4 px-4">
         {/* Top utility row */}
-        <div className="grid grid-cols-[auto_1fr_auto] items-center gap-4 py-3 md:py-4">
+        <div className="contents">
           <Link
             to="/"
             aria-label="Entwurf Energie Startseite"
-            className="flex items-center rounded-md transition-opacity hover:opacity-80"
+            className="col-start-1 row-start-1 flex shrink-0 items-center rounded-md transition-opacity hover:opacity-80 lg:row-span-2 lg:py-4"
           >
             <BrandLogo priority className="w-[11.5rem] sm:w-[13.8rem]" />
           </Link>
 
-          <div />
-
-          <div className="flex items-center gap-1 md:gap-5">
+          <div className="col-start-2 row-start-1 flex h-16 min-w-0 items-center justify-end gap-1 lg:h-10 lg:gap-5">
             <Link
               to="/kontakt"
-              className="hidden items-center gap-2 text-sm font-semibold text-primary transition hover:text-success md:inline-flex"
+              className="hidden items-center gap-2 text-sm font-semibold text-primary transition hover:text-success lg:inline-flex"
             >
               <Phone className="h-4 w-4 text-success" />
               <span>Kontakt</span>
             </Link>
             <Link
               to="/freunde-werben"
-              className="hidden items-center gap-2 text-sm font-medium text-primary transition hover:text-success md:inline-flex"
+              className="hidden items-center gap-2 text-sm font-medium text-primary transition hover:text-success lg:inline-flex"
             >
               <UserPlus className="h-4 w-4 text-success" />
               <span>Weiterempfehlen</span>
@@ -169,7 +167,7 @@ export function Header() {
                   return !current;
                 });
               }}
-              className="grid h-10 w-10 place-items-center rounded-full border border-border text-primary md:hidden"
+              className="grid h-10 w-10 place-items-center rounded-full border border-border text-primary lg:hidden"
             >
               {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -179,7 +177,7 @@ export function Header() {
         {/* Main nav row */}
         <nav
           ref={navRef}
-          className="relative hidden h-14 items-center justify-end gap-8 md:flex"
+          className="relative col-start-2 row-start-2 hidden h-12 min-w-0 items-center justify-end gap-1 lg:flex xl:gap-4"
           onMouseLeave={scheduleClose}
         >
           {mainNav.map((n) => {
@@ -208,7 +206,7 @@ export function Header() {
                   to={n.to}
                   aria-current={isActive ? "page" : undefined}
                   className={cn(
-                    "relative z-10 inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-sm transition-colors",
+                    "relative z-10 inline-flex items-center gap-1 whitespace-nowrap rounded-full px-3 py-2 text-sm transition-colors",
                     isActive
                       ? "font-semibold text-success"
                       : "font-medium text-primary hover:text-success",
@@ -344,7 +342,7 @@ export function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-border bg-background md:hidden"
+            className="overflow-hidden border-t border-border bg-background lg:hidden"
           >
             <nav className="mx-auto flex max-w-6xl flex-col px-4 py-2">
               {mainNav.map((n) => (
